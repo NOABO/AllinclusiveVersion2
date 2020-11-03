@@ -36,6 +36,7 @@ h3 {
   font-style: oblique;
 }
 #components {
-
- text-align: center;
+  position: relative;
+  left: 600px;
+  bottom: 170px;
 }
