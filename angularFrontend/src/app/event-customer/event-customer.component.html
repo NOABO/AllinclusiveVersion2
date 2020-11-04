@@ -1,1 +1,11 @@
-<p>event-customer works!</p>
+<h3>event-customer works!</h3>
+<div>
+    <div>
+        <p>username:</p>
+        <p>add profile picture</p>
+        <div class="imgHolder">
+        </div>
+        <input #image type="text" placeholder="imgUrl" />
+        <button (click)="addImg(image.value)">add</button>
+    </div>
+</div>

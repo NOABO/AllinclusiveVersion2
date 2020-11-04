@@ -1,15 +1,19 @@
 <h1>this is the customer page </h1>
  
-<p>firstName:</p>
-<input type="text" placeholder="firstName" >
+<div>
+    <form >
+<p>firstName:</p>    
+<input name="firstName" formControlFirstName="firstName"  type="text" placeholder="firstName" >
 <p>lastName:</p>
-<input type="text" placeholder="lastName">
+<input name="lastName" formControlLastName="lastName" type="text" placeholder="lastName">
 <p>emailAdress:</p>
-<input type="text" placeholder="Email">
+<input name="emailAdress" formControlEmailAdress="emailAdress" type="text" placeholder="Email">
 <p>passWord:</p>
-<input type="password" placeholder="passWord">
+<input name="emailAdress" formControlEmailAdress="emailAdress" type="password" placeholder="passWord">
 <!-- <input class="btn" type="submit" value="Submit"> -->
 <button class="btn" type="submit" (click)="handleCustomerSubmit('event-customer')"><i >Submit</i></button>
+</form>
+</div>
 
 
 
