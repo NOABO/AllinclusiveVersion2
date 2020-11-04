@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
 import { CustomerComponent } from './customer/customer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BlogComponent } from './component/blog/blog.component';
 import { HomeComponent } from './component/home/home.component';
 
@@ -15,15 +17,15 @@ import { HomeComponent } from './component/home/home.component';
     CompanyComponent,
     CustomerComponent,
     NavbarComponent,
-   
     BlogComponent,
-   
-    HomeComponent
+   HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-   
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
     
   ],
   providers: [],
