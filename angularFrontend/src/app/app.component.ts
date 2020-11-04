@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import {CustomerComponent} from './customer/customer.component'
-import {CompanyComponent} from './company/company.component'
+import {CustomerComponent} from './customer/customer.component';
+import {CompanyComponent} from './company/company.component';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
