@@ -11,6 +11,7 @@ import {CompanyComponent} from './company/company.component';
 
 export class AppComponent {
   title = 'angularFrontend';
+  // status: boolean=false;
 
   constructor(private router: Router){}
 

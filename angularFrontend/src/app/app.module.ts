@@ -5,8 +5,8 @@ import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
 import { CustomerComponent } from './customer/customer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HeaderComponent } from './component/header/header.component';
-import { FooterComponent } from './component/footer/footer.component';
+
+import { BlogComponent } from './component/blog/blog.component';
 import { HomeComponent } from './component/home/home.component';
 
 @NgModule({
@@ -15,8 +15,9 @@ import { HomeComponent } from './component/home/home.component';
     CompanyComponent,
     CustomerComponent,
     NavbarComponent,
-    HeaderComponent,
-    FooterComponent,
+   
+    BlogComponent,
+   
     HomeComponent
   ],
   imports: [
