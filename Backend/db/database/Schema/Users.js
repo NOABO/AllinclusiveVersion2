@@ -7,7 +7,11 @@ const userSchema = new mongoose.Schema(
     email: { type: String, required: true },
     password: { type: String, required: true },
     phoneNumber: { type: String, required: true },
-    specialNeed: { type: Boolean, required: true },
+
+
+    specialNeed: { type: String, required: true },
+
+
     imgUrl: { type: String, required: true },
 
     //events  to do later
