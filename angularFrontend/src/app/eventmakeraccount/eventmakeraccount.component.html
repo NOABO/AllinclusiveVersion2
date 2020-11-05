@@ -1,0 +1,33 @@
+<div id="eventProfile">
+  <h1>Post your events here</h1>
+  <br />
+  <p>Name:</p>
+  <p>Email adress:</p>
+  <p>Phone number:</p>
+  <br />
+  <h3>Add an event</h3>
+  <div>
+    <p>Event Type</p>
+    <input type="text" placeholder="Event Type" />
+    <p>Event Name</p>
+    <input type="text" placeholder="Event Name" />
+    <p>Event description</p>
+    <input type="text" placeholder="write descrption" />
+    <p>Event date</p>
+    <input type="text" placeholder="Event Date" />
+    <p>Location</p>
+    <input type="text" placeholder="Location" />
+    <p>Price per Person</p>
+    <input type="text" placeholder="Price per person" />
+    <p>put your video src here</p>
+    <div>
+      <input #video type="text" placeholder="video source" />
+      <button class="btn" (click)="add(video.value)">
+        add event related video
+      </button>
+    </div>
+    <div class="showVideo"></div>
+    <br />
+    <button class="btn">Add</button>
+  </div>
+</div>
