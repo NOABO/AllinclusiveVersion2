@@ -25,4 +25,7 @@ export class AppComponent {
   handleCustomerButton(pageName:string):void{
        this.router.navigate([`${pageName}`]);
   }
+  handleLoginButton(pageName:string):void{
+    this.router.navigate([`${pageName}`]);
+  }
 }

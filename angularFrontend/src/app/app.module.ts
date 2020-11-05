@@ -16,7 +16,7 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
 
 
 
@@ -30,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
      EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-   HomeComponent
+   HomeComponent,
+   LoginCustomerComponent
   
 
 
