@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 
 import {CustomerComponent} from './customer/customer.component'
 import {CompanyComponent} from './company/company.component'
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
 
 
 @Component({
@@ -17,12 +19,13 @@ export class AppComponent {
 
   constructor(private router: Router){}
 
-// redirection to the company component 
-  handleCompanyButton(pageName:string):void{
+// redirection to the login-company component 
+  handleLoginCompanyButton(pageName:string):void{
        this.router.navigate([`${pageName}`]);
   }
-  // redirection to the customer component
-  handleCustomerButton(pageName:string):void{
-       this.router.navigate([`${pageName}`]);
+  
+  // redirection to the login-customer component
+  handleLoginButton(pageName:string):void{
+    this.router.navigate([`${pageName}`]);
   }
 }
