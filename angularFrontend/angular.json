@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "sama": {
+    "angularFrontend": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sama",
+            "outputPath": "dist/angularFrontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "sama:build"
+            "browserTarget": "angularFrontend:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "sama:build:production"
+              "browserTarget": "angularFrontend:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "sama:build"
+            "browserTarget": "angularFrontend:build"
           }
         },
         "test": {
@@ -110,19 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "sama:serve"
+            "devServerTarget": "angularFrontend:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "sama:serve:production"
+              "devServerTarget": "angularFrontend:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "sama",
+  "defaultProject": "angularFrontend",
   "cli": {
-    "analytics": "1216dd5a-d30c-42d4-b5ab-22644290bf26"
+    "analytics": "913a8c0f-7fff-49f0-b1b5-a9b1d8e3f9e1"
   }
 }
