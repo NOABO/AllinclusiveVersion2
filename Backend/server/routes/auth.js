@@ -14,7 +14,9 @@ const schema = Joi.object({
   email: Joi.string().min(6).required().email(),
   password: Joi.string().min(6).required(),
   phoneNumber: Joi.number().required(),
-  specialNeed: Joi.boolean().required(),
+
+  specialNeed: Joi.string().required(),
+
   imgUrl: Joi.string().required(),
 });
 
@@ -30,7 +32,9 @@ router.post("/add", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(req.body.password, salt);
 
     const newUser = new User({
-      type:req.body.type,
+
+      type: req.body.type,
+
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,

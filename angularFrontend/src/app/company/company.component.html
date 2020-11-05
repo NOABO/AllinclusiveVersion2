@@ -1,11 +1,79 @@
-<h1>this is the comapny page</h1> 
 
-<p>companyName:</p>
-<input type="text" placeholder="companyName" >
-<p>emailAdress:</p>
-<input type="text" placeholder="Email">
-<p>address:</p>
-<input type="text" placeholder="address">
-<p>passWord:</p>
-<input type="password" placeholder="passWord">
-<button class ='btn' (click)="handleEventMaker('eventmakeraccount')">Submit</button>
+
+
+<h1>this is the comapny page</h1>
+
+<p>Type</p>
+<input
+  type="text"
+  id="type"
+  class="form-control"
+  placeholder="type"
+  required=""
+  autofocus=""
+  [(ngModel)]="type"
+  required
+/>
+<p>Name</p>
+<input
+  type="name"
+  id="name"
+  class="form-control"
+  placeholder="name"
+  required=""
+  autofocus=""
+  [(ngModel)]="name"
+  required
+/>
+<p>Email</p>
+<input
+  type="emailcompany"
+  id="emailcompany"
+  class="form-control"
+  placeholder="emailcompany"
+  required=""
+  [(ngModel)]="emailCompany"
+  required
+/>
+<p>passWord</p>
+<input
+  type="password"
+  id="passwordCompnay"
+  class="form-control"
+  placeholder="passwordCompany"
+  required=""
+  [(ngModel)]="passwordCompany"
+  required
+/>
+<p>PhoneNumber</p>
+<input
+  type="phoneNumberCompany"
+  id="phoneNumberCompany"
+  class="form-control"
+  placeholder="phoneNumberCompany"
+  required=""
+  [(ngModel)]="phoneNumberCompany"
+  required
+/>
+<p>Adress</p>
+<input
+  type="address"
+  id="address"
+  class="form-control"
+  placeholder="address"
+  required=""
+  [(ngModel)]="adress"
+  required
+/>
+<p>ImgUrl</p>
+<input
+  type="text"
+  id="imgUrlCompany"
+  class="form-control"
+  placeholder="imgUrlCompany"
+  required=""
+  [(ngModel)]="imgUrlCompany"
+  required
+/>
+<button class="btn" type="submit" (click)="onSubmit('eventmakeraccount')">Submit</button>
+
