@@ -6,6 +6,7 @@ import { CompanyComponent } from './company/company.component';
 import { CustomerComponent } from './customer/customer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 
 
@@ -16,6 +17,7 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -42,6 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MatCarouselModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
