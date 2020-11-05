@@ -4,6 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CompanyComponent } from './company/company.component';
 import { CustomerComponent } from './customer/customer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { EventCustomerComponent } from './event-customer/event-customer.component';
+
 
 
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
@@ -22,13 +25,16 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     CompanyComponent,
     CustomerComponent,
-
-    
-    EventmakeraccountComponent,
+    NavbarComponent,
+    EventCustomerComponent,
+     EventmakeraccountComponent,
     EMeventsComponent,
-    
     BlogComponent,
    HomeComponent
+  
+
+
+    
     ],
   imports: [
     BrowserModule,
