@@ -15,6 +15,7 @@ const schema = Joi.object({
   password: Joi.string().min(6).required(),
   phoneNumber: Joi.number().required(),
 
+
   specialNeed: Joi.string().required(),
 
   imgUrl: Joi.string().required(),
@@ -33,8 +34,10 @@ router.post("/add", async (req, res, next) => {
 
     const newUser = new User({
 
+
       type: req.body.type,
 
+ 
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,

@@ -1,5 +1,40 @@
-<h1 id="title">WELCOME TO ALL INCLUSIVE</h1>
+<header>
+  <img src="https://codetheweb.blog/assets/img/icon2.png">
+  <nav>
+    <span>
+    <a routerLink="/home">All-Inclusive </a>
   
+  </span>
+  <span>
+    <ul>
+      <li>
+        <a routerLink="/events">Events</a>
+      </li>
+      <li>
+        <a routerLink="/reservation">Reservation</a>
+      </li>
+      <li>
+        <a routerLink="/myaccount">My Account</a>
+      </li>
+      <li>
+        <a routerLink="/blog">Blog</a>
+      </li>
+      <li>
+        <a routerLink="/contact">Contact Us</a>
+      </li>
+      
+    </ul>
+  </span>
+  
+  </nav>
+</header>
+
+<mat-carousel id="mat-carousel" timings="200ms ease-in" [autoplay]="true" interval="5000" color="accent" maxWidth="auto"
+  proportion="25" slides="5" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true"
+  [useMouseWheel]="false" orientation="ltr">
+  <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image"
+    overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
+</mat-carousel>
 <div>
   <h3>join as :</h3>
   <button class="btn" (click)="handleCompanyButton('company')"><i >Company</i></button>
@@ -7,6 +42,7 @@
   <button class="btn" (click)="handleCustomerButton('customer')"><i>Customer</i></button>
 </div> 
 <div id="components"><router-outlet ></router-outlet></div>
+ 
  
 
 
