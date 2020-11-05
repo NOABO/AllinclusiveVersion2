@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
 
 
 
@@ -31,7 +32,8 @@ import { LoginCustomerComponent } from './login-customer/login-customer.componen
     EMeventsComponent,
     BlogComponent,
    HomeComponent,
-   LoginCustomerComponent
+   LoginCustomerComponent,
+   LoginCompanyComponent
   
 
 
