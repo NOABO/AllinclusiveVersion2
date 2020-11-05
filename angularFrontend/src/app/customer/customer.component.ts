@@ -26,7 +26,9 @@ export class CustomerComponent implements OnInit {
 
 
 
-  onSubmit(pageName:string) :void{
+
+  onSubmit(pageName:string):void{
+
 
 
     this.router.navigate([`${pageName}`]);

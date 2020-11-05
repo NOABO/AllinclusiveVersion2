@@ -7,6 +7,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 
+
 import {EventmakeraccountComponent} from './eventmakeraccount/eventmakeraccount.component';
 const routes: Routes = [
   {path:'', redirectTo:'home', pathMatch:'full'},
