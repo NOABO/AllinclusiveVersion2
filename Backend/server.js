@@ -1,4 +1,5 @@
 const express = require('express');
+
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -21,6 +22,7 @@ const Connection = mongoose.connection;
 Connection.on('error', console.error.bind(console, 'connection error:'))
 Connection.once('open', function () {
   console.log('Database is connected ')
+
 })
 
 //Routes middlewares
@@ -67,6 +69,7 @@ app.use('/api/message', require('././server/routes/messages.js'));
 
 //   });
 // });
+
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
 @Component({
@@ -35,4 +36,5 @@ export class CompanyComponent implements OnInit {
         console.log(data);
       });
   }
+
 }
