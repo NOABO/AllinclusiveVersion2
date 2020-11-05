@@ -10,8 +10,15 @@
 <input name="emailAdress" formControlEmailAdress="emailAdress" type="text" placeholder="Email">
 <p>passWord:</p>
 <input name="emailAdress" formControlEmailAdress="emailAdress" type="password" placeholder="passWord">
-<!-- <input class="btn" type="submit" value="Submit"> -->
-<button class="btn" type="submit" (click)="handleCustomerSubmit('event-customer')"><i >Submit</i></button>
+<p>category:</p>
+<select>
+    <option>sport events</option>
+    <option>musical events</option>
+    <option>cinematic events</option>
+    <option>cultural events</option>
+</select>
+
+<button class="btn" type="submit" (click)="handleCustomerSubmit('event-customer')"><i >Signup</i></button>
 </form>
 </div>
 
