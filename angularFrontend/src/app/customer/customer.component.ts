@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 
-
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -38,5 +37,4 @@ export class CustomerComponent implements OnInit {
         console.log(data);
       });
   }
-
 }
