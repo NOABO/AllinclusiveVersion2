@@ -1,0 +1,26 @@
+<h1>this is the customer page </h1>
+ 
+<div>
+    <form >
+<p>firstName:</p>    
+<input name="firstName" formControlFirstName="firstName"  type="text" placeholder="firstName" >
+<p>lastName:</p>
+<input name="lastName" formControlLastName="lastName" type="text" placeholder="lastName">
+<p>emailAdress:</p>
+<input name="emailAdress" formControlEmailAdress="emailAdress" type="text" placeholder="Email">
+<p>passWord:</p>
+<input name="emailAdress" formControlEmailAdress="emailAdress" type="password" placeholder="passWord">
+<p>category:</p>
+<select>
+    <option>sport events</option>
+    <option>musical events</option>
+    <option>cinematic events</option>
+    <option>cultural events</option>
+</select>
+
+<button class="btn" type="submit" (click)="handleCustomerSubmit('event-customer')"><i >Signup</i></button>
+</form>
+</div>
+
+
+
