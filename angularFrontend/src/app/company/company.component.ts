@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
+
 @Component({
   selector: 'app-company',
   templateUrl: './company.component.html',
@@ -15,13 +16,16 @@ export class CompanyComponent implements OnInit {
   phoneNumberCompany: string = '';
   adress: string = '';
   imgUrlCompany: string = '';
-  constructor(private _http: HttpService) {}
+  constructor(private _http: HttpService ,private router: Router) {}
 
   ngOnInit(): void {}
 
   // ngDoCheck() {console.log(this.type)}
-
-  onSubmit() {
+  
+  onSubmit(pageName:string):void {
+    
+      this.router.navigate([`${pageName}`]);
+    
     this._http
       .onsubmit(
         this.type,
@@ -30,7 +34,7 @@ export class CompanyComponent implements OnInit {
         this.phoneNumberCompany,
         this.passwordCompany,
         this.adress,
-        this.imgUrlCompany
+        this.imgUrlCompany 
       )
       .subscribe((data) => {
         console.log(data);
