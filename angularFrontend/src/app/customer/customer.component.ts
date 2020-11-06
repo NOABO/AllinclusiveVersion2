@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -15,38 +17,44 @@ export class CustomerComponent implements OnInit {
   phoneNumber: string = '';
   specialNeed: string = '';
   imgUrl: string = '';
-  constructor(private _http: HttpService,private router: Router) {}
-
+  constructor(private _http: HttpService, private router: Router) {}
 
   ngOnInit(): void {}
 
-
   // ngDoCheck() {console.log(this.type)}
 
-
-
-
-
-  onSubmit(pageName:string):void{
-
-
-
+  onSubmit(pageName: string): void {
     this.router.navigate([`${pageName}`]);
-
-    this._http
-      .onclick(
-        this.type,
-        this.firstName,
-        this.lastName,
-        this.email,
-        this.passWord,
-        this.phoneNumber,
-        this.specialNeed,
-        this.imgUrl
-      )
-      .subscribe((data) => {
-        console.log(data);
+    if (
+      this.type === '' ||
+      this.firstName === '' ||
+      this.lastName === '' ||
+      this.email === '' ||
+      this.passWord === '' ||
+      this.phoneNumber === '' ||
+      this.specialNeed === '' ||
+      this.imgUrl === ''
+    ) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Something wrong',
+        text: `Try again`,
       });
+    } else {
+      this._http
+        .onclick(
+          this.type,
+          this.firstName,
+          this.lastName,
+          this.email,
+          this.passWord,
+          this.phoneNumber,
+          this.specialNeed,
+          this.imgUrl
+        )
+        .subscribe((data) => {
+          console.log(data);
+        });
+    }
   }
-
 }

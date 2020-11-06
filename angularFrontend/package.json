@@ -25,6 +25,7 @@
     "nodemailer": "^6.4.14",
     "nodemailer-smtp-transport": "^2.7.4",
     "rxjs": "~6.6.0",
+    "sweetalert2": "^10.9.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
