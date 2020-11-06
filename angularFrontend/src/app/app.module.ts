@@ -14,12 +14,12 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { EventsMadeComponent } from './events-made/events-made.component';
+
 
 
 
@@ -32,20 +32,16 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     CustomerComponent,
     NavbarComponent,
     EventCustomerComponent,
-     EventmakeraccountComponent,
+    EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-   HomeComponent,
+    HomeComponent,
+    ContactUsComponent,
+    HomeComponent,
+    EventsMadeComponent,
+    LoginCustomerComponent,
+    LoginCompanyComponent
 
-   EventsMadeComponent
-
-   LoginCustomerComponent,
-   LoginCompanyComponent
-
-  
-
-
-    
     ],
   imports: [
     BrowserModule,

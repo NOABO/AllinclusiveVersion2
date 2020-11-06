@@ -21,7 +21,7 @@
   transition: all 0.5s;
   cursor: pointer;
   transition: all 0.5s;
-  border-color: rgb(233, 95, 4);
+  border-color: rgb(218, 130, 72);
   outline: none;
 }
 .btn:hover {
@@ -46,21 +46,22 @@ h1 {
 h3 {
   position: relative;
   left: 120px;
-  top: 120px;
+  top: 600px;
   font-size: 30px;
   color: rgb(206, 69, 6);
   font-style: italic;
 }
 #components {
   position: relative;
-  left: 600px;
-  bottom: 170px;
+  left: 400px;
+  top: 100px;
+  height: 100px;
+  width: 400px;
 }
 
 #mat-carousel {
   position: relative;
   top: 80px;
-
 }
 /*navbar*/
 
@@ -70,12 +71,12 @@ header img {
 }
 
 header {
-  background-color: white;
-  position: fixed;
+  background-color: rgb(243, 214, 141);
   top: 0;
   left: 0;
   right: 0;
   height: 80px;
+  transition: top 0.3s;
   display: flex;
   align-items: center;
   box-shadow: 0 0 25px 0 black;
@@ -92,4 +93,22 @@ header li {
 header li a {
   color: black;
   text-decoration: none;
+}
+
+.nav{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+};
+
+#aboutUs{
+  margin-left: 200px;
+}
+.contactLogo{
+height: 50px;
+}
+.fbLogo{
+height:50px;
+}
+.gmailLogo{
+    height: 50px;
 }
