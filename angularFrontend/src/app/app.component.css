@@ -1,13 +1,12 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 #main-page-div {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  
 }
 .btn {
   position: relative;
@@ -46,11 +45,11 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif ;
 }
 h3 {
- position: relative;
+  position: relative;
   left: 120px;
   top: 600px;
   font-size: 30px;
-  color:rgb(206, 69, 6);
+  color: rgb(206, 69, 6);
   font-style: italic;
 }
 #components {
@@ -71,7 +70,6 @@ header img {
   height: 80px;
   margin-left: 40px;
 }
-
 
 header {
   background-color: rgb(243, 214, 141);

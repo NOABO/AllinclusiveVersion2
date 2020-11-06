@@ -7,9 +7,6 @@ import { CustomerComponent } from './customer/customer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-
-
-
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
 import { EMeventsComponent } from './emevents/emevents.component';
 import { BlogComponent } from './component/blog/blog.component';
@@ -17,8 +14,12 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventsMadeComponent } from './events-made/events-made.component';
+
 
 
 
@@ -34,7 +35,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     EMeventsComponent,
     BlogComponent,
     HomeComponent,
-    ContactUsComponent
+    EventsMadeComponent,
+    ContactUsComponent,
+    LoginCustomerComponent,
+    LoginCompanyComponent
 
     ],
   imports: [

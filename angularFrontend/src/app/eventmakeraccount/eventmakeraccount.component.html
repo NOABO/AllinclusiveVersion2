@@ -8,26 +8,33 @@
   <h3>Add an event</h3>
   <div>
     <p>Event Type</p>
-    <input type="text" placeholder="Event Type" />
+    <input #EventType type="text" placeholder="Event Type" [(ngModel)]="Etype" required/>
     <p>Event Name</p>
-    <input type="text" placeholder="Event Name" />
+    <input #EventName type="text" placeholder="Event Name"  [(ngModel)]="Ename" required/>
     <p>Event description</p>
-    <input type="text" placeholder="write descrption" />
+    <input #desc type="text" placeholder="write descrption" [(ngModel)]="Edescription" required/>
     <p>Event date</p>
-    <input type="text" placeholder="Event Date" />
+    <input #EventDate type="datetime-local" placeholder="Event Date"  [(ngModel)]="Edate" required/>
     <p>Location</p>
-    <input type="text" placeholder="Location" />
-    <p>Price per Person</p>
-    <input type="text" placeholder="Price per person" />
-    <p>put your video src here</p>
+    <input #Location type="text" placeholder="Location"  [(ngModel)]="Eplace" required/>
     <div>
-      <input #video type="text" placeholder="video source" />
+    <p>Enter location coordinates here(Case Sensitive Without QUOTES)</p>
+    <a href="https://www.google.com/maps/@36.831232,10.1974016,13z" target="_blank">Find Your Location Coords</a><br>
+    <input #coor type="text" placeholder="coords"   [(ngModel)]="ElocURL" required/>
+    <button (click)="addMarker(coor.value)">Add Marker</button><br>
+            <div #Gmap class="Gmap"></div>
+  </div><br>
+    <p>Price per Person</p>
+    <input #Price type="number" value="500" min="10" step="1" data-number-to-fixed="2" data-number-stepfactor="100" placeholder="Price per person"  [(ngModel)]="Eprice" required/>
+    <p>put your video src here (Case Sensitive Without QUOTES)</p>
+    <div>
+      <input #video type="text" placeholder="video source"  [(ngModel)]="EvidURL" required/>
       <button class="btn" (click)="add(video.value)">
         add event related video
       </button>
     </div>
-    <div class="showVideo"></div>
+    <div #video class="showVideo"></div>
     <br />
-    <button class="btn">Add</button>
+    <button class="btn" (click)="onSubmit1()">Submit Event</button>
   </div>
 </div>
