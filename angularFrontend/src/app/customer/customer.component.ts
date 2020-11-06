@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
-
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -15,13 +15,22 @@ export class CustomerComponent implements OnInit {
   phoneNumber: string = '';
   specialNeed: string = '';
   imgUrl: string = '';
-  constructor(private _http: HttpService) {}
+  constructor(private _http: HttpService,private router: Router) {}
+
 
   ngOnInit(): void {}
 
+
   // ngDoCheck() {console.log(this.type)}
 
-  onSubmit() {
+
+
+
+  onSubmit(pageName:string):void{
+
+
+    this.router.navigate([`${pageName}`]);
+
     this._http
       .onclick(
         this.type,
@@ -37,4 +46,5 @@ export class CustomerComponent implements OnInit {
         console.log(data);
       });
   }
+
 }
