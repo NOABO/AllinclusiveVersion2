@@ -17,10 +17,10 @@ const routes: Routes = [
   {path:'customer', component:CustomerComponent},
   {path:'event-customer', component:EventCustomerComponent},
   {path:'eventmakeraccount',component:EventmakeraccountComponent},
-  {path: '', component:BlogComponent},
+  {path: 'blog', component:BlogComponent},
   {path:'home',component:HomeComponent},
   {path:'about', component:AboutUsComponent},
-  {path: 'blog', component:LikeComponent}
+  {path: '', component:LikeComponent}
 
 ];
 
