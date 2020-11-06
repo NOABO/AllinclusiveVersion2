@@ -27,6 +27,7 @@ router.post("/add", async (req, res) => {
     Eplace: req.body.Eplace,
     ElocURL: req.body.ElocURL ,
     Eprice: req.body.Eprice ,
+    EvidURL:req.body.EvidURL
   });
   await newEvent.save(() => {
     

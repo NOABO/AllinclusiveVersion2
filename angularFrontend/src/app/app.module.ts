@@ -14,11 +14,12 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsMadeComponent } from './events-made/events-made.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -27,16 +28,16 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     CustomerComponent,
     NavbarComponent,
     EventCustomerComponent,
-     EventmakeraccountComponent,
+    EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-   HomeComponent,
-   EventsMadeComponent
-  
+    HomeComponent,
 
+    EventsMadeComponent,
 
-    
-    ],
+    LoginCustomerComponent,
+    LoginCompanyComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -47,6 +48,6 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     MatCarouselModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
