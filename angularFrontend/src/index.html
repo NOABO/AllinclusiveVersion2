@@ -7,8 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
-    body {
-      background-color: rgb(250, 245, 238);
+   
+footer {
+  display: flex;
+  height: 150px;
+	width: auto;
+	background-color: rgba(110, 48, 17, 0.808);
+	color: white;
+  text-align: center;
+}
+#components {
+  min-height: 100%;
+  margin-bottom: 800px; 
+}
+#components:after {
+  content: "";
+  display: block;
+}
+footer, #components:after {
+  height: 170px; 
+}
+
+html {
+  height: 100%;
+}
+body {
+  background-color: rgb(250, 245, 238);
+    min-height: 100%;
     }
   </style>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">

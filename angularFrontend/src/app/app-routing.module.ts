@@ -5,7 +5,7 @@ import { BlogComponent } from './component/blog/blog.component';
 import { HomeComponent } from './component/home/home.component';
 import { CustomerComponent } from './customer/customer.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
-
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 import {EventmakeraccountComponent} from './eventmakeraccount/eventmakeraccount.component';
 const routes: Routes = [
@@ -16,8 +16,8 @@ const routes: Routes = [
   {path:'event-customer', component:EventCustomerComponent},
   {path:'eventmakeraccount',component:EventmakeraccountComponent},
   {path: 'blog', component:BlogComponent},
-  {path:'home',component:HomeComponent}
-
+  {path:'home',component:HomeComponent},
+  { path:"contact-us" , component:ContactUsComponent}
 ];
 
 @NgModule({

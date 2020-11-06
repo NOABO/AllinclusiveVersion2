@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 
@@ -29,14 +30,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CustomerComponent,
     NavbarComponent,
     EventCustomerComponent,
-     EventmakeraccountComponent,
+    EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-   HomeComponent
-  
+    HomeComponent,
+    ContactUsComponent
 
-
-    
     ],
   imports: [
     BrowserModule,
