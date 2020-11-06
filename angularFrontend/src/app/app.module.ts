@@ -14,8 +14,13 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsMadeComponent } from './events-made/events-made.component';
+
 
 
 
@@ -31,7 +36,12 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     EMeventsComponent,
     BlogComponent,
    HomeComponent,
+
    EventsMadeComponent
+
+   LoginCustomerComponent,
+   LoginCompanyComponent
+
   
 
 
