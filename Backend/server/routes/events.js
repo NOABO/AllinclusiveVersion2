@@ -30,7 +30,7 @@ router.post("/add", async (req, res) => {
     EvidURL: req.body.EvidURL,
   });
   await newEvent.save(() => {
-    res.send(newEvent);
+    res.json(newEvent);
   });
 });
 
