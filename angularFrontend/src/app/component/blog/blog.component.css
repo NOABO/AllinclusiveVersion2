@@ -58,7 +58,7 @@ body {
   }
 
   .rating label{
-    /* display: block; */
+    display: block;
     cursor: pointer;
     width: 50px;
     background: #ccc;
@@ -68,7 +68,7 @@ body {
     content: '\f005';
     /* font-family: fontAwesome; */
     position: relative;
-    display: inline-block;
+    display: block;
     font-size: 50px;
     color: #101010;
   }
@@ -77,16 +77,16 @@ body {
     content: '\f005';
     /* font-family: fontAwesome; */
     position: absolute;
-    display: inline-block;
+    display: block;
     font-size: 50px;
-    color: #1f9cff;
-    top: 0%;
+    color: #ffcb1f;
+    top: 0;
     opacity: 0;
     transition: .5s;
-    text-shadow: 0 2px 5px rgb(0,0,0,5);
+    text-shadow: 0 2px 5px rgb(0,0,0,.5);
   }
   .rating label:hover:after,
-  .rating label:hover ~label:after,
+  .rating label:hover ~ label:after,
   .rating input:checked ~ label:after{
     opacity: 1;
   }

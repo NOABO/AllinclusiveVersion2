@@ -71,7 +71,7 @@ header img {
 
 
 header {
-  background-color: white;
+  background-color: bisque;
   position: fixed;
   top: 0;
   left: 0;
@@ -93,4 +93,8 @@ header li {
 header li a {
   color: black;
   text-decoration: none;
+}
+
+.about{
+  margin-right: 20px;
 }
