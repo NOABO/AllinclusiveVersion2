@@ -56,7 +56,7 @@ export class HttpService {
     Eplace: string ,
     ElocURL: string ,
     Eprice: string ,
-    EvidURL:  String
+    EvidURL: string
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
     Etype,
