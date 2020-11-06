@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './component/about-us/about-us.component';
+import { LikeComponent } from './component/like/like.component';
 
 
 
@@ -34,7 +35,8 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
     EMeventsComponent,
     BlogComponent,
    HomeComponent,
-   AboutUsComponent
+   AboutUsComponent,
+   LikeComponent
   
 
 

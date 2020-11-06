@@ -4,6 +4,7 @@ import { CompanyComponent } from './company/company.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { BlogComponent } from './component/blog/blog.component';
 import { HomeComponent } from './component/home/home.component';
+import { LikeComponent } from './component/like/like.component';
 import { CustomerComponent } from './customer/customer.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
 
@@ -16,9 +17,10 @@ const routes: Routes = [
   {path:'customer', component:CustomerComponent},
   {path:'event-customer', component:EventCustomerComponent},
   {path:'eventmakeraccount',component:EventmakeraccountComponent},
-  {path: 'blog', component:BlogComponent},
+  {path: '', component:BlogComponent},
   {path:'home',component:HomeComponent},
-  {path:'about', component:AboutUsComponent}
+  {path:'about', component:AboutUsComponent},
+  {path: 'blog', component:LikeComponent}
 
 ];
 
