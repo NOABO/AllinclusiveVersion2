@@ -13,17 +13,17 @@ customers : any=[{name:'bassoum',message:'my team im really proud of you ❤️'
  times : any= moment().format('MMMM Do YYYY, h:mm:ss a');
  time : any= [];
  postComment = [];
- post(){
-   console.log(this.time)
-   this.postComment.push(this.comment);
-   this.comment = "";
-   this.time.push(this.times);
- }
+ 
  
 constructor() { 
   
 }
-
+post(){
+  console.log(this.time)
+  this.postComment.push(this.comment);
+  this.comment = "";
+  this.time.push(this.times);
+}
   ngOnInit(): void {
    
   }
