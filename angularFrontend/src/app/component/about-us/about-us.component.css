@@ -1,0 +1,29 @@
+.about {
+    width: 50%;
+    background-color: rgb(249 171 0 / 12%);
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    padding: 50px;
+    position: absolute;
+    top: 120px;
+    left: 10%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* .btn {
+    padding: 10px 20px;
+    font-family: Century Gothic;
+    font-size: large;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    border-radius: 8px;
+  }
+  
+  .btn :hover {
+    background: black;
+    color: #ffffff;
+  }
+   */
