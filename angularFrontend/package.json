@@ -23,6 +23,7 @@
     "@angular/router": "~10.2.0",
     "@ngmodule/material-carousel": "^0.6.0",
     "font-awesome": "^4.7.0",
+    "moment": "^2.29.1",
     "nodemailer": "^6.4.14",
     "nodemailer-smtp-transport": "^2.7.4",
     "rxjs": "~6.6.0",
