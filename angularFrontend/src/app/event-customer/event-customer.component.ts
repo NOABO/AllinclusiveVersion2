@@ -13,6 +13,7 @@ export class EventCustomerComponent implements OnInit {
   }
   title = "image";
   currentVal = "";
+  numberOfLikes : 0;
 
 addImg(val) {
 
@@ -26,5 +27,15 @@ this.currentVal=val
                   />`
                 
       document.querySelector('.imgHolder').appendChild(imgH); 
+  }
+ 
+  likeButtonClick(val) {
+    this.numberOfLikes= val;
+    this.numberOfLikes++;
+    console.log(this.numberOfLikes)
+  }
+  dislikeButtonClick() {
+    this.numberOfLikes--;
+    console.log(this.numberOfLikes)
   }
 }
