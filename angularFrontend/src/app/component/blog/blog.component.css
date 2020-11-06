@@ -61,7 +61,7 @@ body {
     display: block;
     cursor: pointer;
     width: 50px;
-    background: #ccc;
+    background: transparent;
   }
 
   .rating label:before{
@@ -70,7 +70,7 @@ body {
     position: relative;
     display: block;
     font-size: 50px;
-    color: #101010;
+    color:transparent;
   }
 
   .rating label:after{
@@ -79,7 +79,7 @@ body {
     position: absolute;
     display: block;
     font-size: 50px;
-    color: #ffcb1f;
+    color:transparent;
     top: 0;
     opacity: 0;
     transition: .5s;
