@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HttpService {
   constructor(private http: HttpClient) {}
-  
+
   onsubmit(
     type: string,
     name: string,
@@ -49,24 +49,24 @@ export class HttpService {
     });
   }
   onRRRR(
-    Etype: string ,
-    Ename: string ,
-    Edescription: string ,
-    Edate: string ,
-    Eplace: string ,
-    ElocURL: string ,
-    Eprice: string ,
-    EvidURL:  String
+    Etype: string,
+    Ename: string,
+    Edescription: string,
+    Edate: string,
+    Eplace: string,
+    ElocURL: string,
+    Eprice: string,
+    EvidURL: String
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
-    Etype,
-    Ename,
-    Edescription,
-    Edate,
-    Eplace ,
-    ElocURL ,
-    Eprice ,
-    EvidURL,
+      Etype,
+      Ename,
+      Edescription,
+      Edate,
+      Eplace,
+      ElocURL,
+      Eprice,
+      EvidURL,
     });
   }
 }

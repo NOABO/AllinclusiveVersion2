@@ -21,10 +21,6 @@ import { LoginCompanyComponent } from './login-company/login-company.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsMadeComponent } from './events-made/events-made.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,21 +28,16 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     CustomerComponent,
     NavbarComponent,
     EventCustomerComponent,
-     EventmakeraccountComponent,
+    EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-   HomeComponent,
+    HomeComponent,
 
-   EventsMadeComponent
+    EventsMadeComponent,
 
-   LoginCustomerComponent,
-   LoginCompanyComponent
-
-  
-
-
-    
-    ],
+    LoginCustomerComponent,
+    LoginCompanyComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -57,6 +48,6 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     MatCarouselModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
