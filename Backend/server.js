@@ -16,6 +16,8 @@ app.use(express.static('angularFrontend/dist/angularFrontend'));
 const Url = 'mongodb://localhost:27017/allinclusive'
 mongoose.connect(Url, {
   useMongoClient: true,
+  useUnifiedTopology: true,
+  useNewUrlParser: true
 })
 const Connection = mongoose.connection;
 Connection.on('error', console.error.bind(console, 'connection error:'))
