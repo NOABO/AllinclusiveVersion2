@@ -7,9 +7,6 @@ import { CustomerComponent } from './customer/customer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-
-
-
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
 import { EMeventsComponent } from './emevents/emevents.component';
 import { BlogComponent } from './component/blog/blog.component';
@@ -24,6 +21,11 @@ import { ChatbotComponent } from './component/chatbot/chatbot.component';
 
 
 
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EventsMadeComponent } from './events-made/events-made.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ import { ChatbotComponent } from './component/chatbot/chatbot.component';
     CustomerComponent,
     NavbarComponent,
     EventCustomerComponent,
-     EventmakeraccountComponent,
+    EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
    HomeComponent,
@@ -40,10 +42,11 @@ import { ChatbotComponent } from './component/chatbot/chatbot.component';
    LikeComponent,
    ChatbotComponent
   
+    EventsMadeComponent,
 
-
-    
-    ],
+    LoginCustomerComponent,
+    LoginCompanyComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -54,6 +57,6 @@ import { ChatbotComponent } from './component/chatbot/chatbot.component';
     MatCarouselModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

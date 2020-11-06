@@ -5,11 +5,8 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 import {CustomerComponent} from './customer/customer.component'
 import {CompanyComponent} from './company/company.component';
 import * as firebase from 'firebase';
-
-const Config = {
-  apiKey: '',
-  databaseURL: ''
-}
+import { LoginCustomerComponent } from './login-customer/login-customer.component';
+import { LoginCompanyComponent } from './login-company/login-company.component';
 
 @Component({
   selector: 'app-root',
@@ -23,12 +20,13 @@ export class AppComponent {
  
   constructor(private router: Router){}
 
-// redirection to the company component 
-  handleCompanyButton(pageName:string):void{
+// redirection to the login-company component 
+  handleLoginCompanyButton(pageName:string):void{
        this.router.navigate([`${pageName}`]);
   }
-  // redirection to the customer component
-  handleCustomerButton(pageName:string):void{
-       this.router.navigate([`${pageName}`]);
+  
+  // redirection to the login-customer component
+  handleLoginButton(pageName:string):void{
+    this.router.navigate([`${pageName}`]);
   }
 }

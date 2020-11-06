@@ -20,14 +20,14 @@ router.get("/:id", async (req, res) => {
 router.post("/add", async (req, res) => {
   console.log(req.body);
   newEvent = new Event({
-    name: req.body.name,
-    type: req.body.type,
-    place: req.body.place,
-    date: req.body.date,
-    description: req.body.description,
-    imgUrl: req.body.imgUrl,
-    like: req.body.like,
-    disLike: req.body.disLike,
+    Etype: req.body.Etype,
+    Ename: req.body.Ename,
+    Edescription: req.body.Edescription,
+    Edate: req.body.Edate,
+    Eplace: req.body.Eplace,
+    ElocURL: req.body.ElocURL,
+    Eprice: req.body.Eprice,
+    EvidURL: req.body.EvidURL,
   });
   await newEvent.save(() => {
     res.json(newEvent);
