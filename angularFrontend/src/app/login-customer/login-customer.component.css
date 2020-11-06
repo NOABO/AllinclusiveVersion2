@@ -6,6 +6,7 @@
     background-color: rgb(243, 214, 141);
     border-color: rgb(192, 119, 70);
     outline: none;
+    margin-left: 85px
   }
   input{
           width: 200px;
