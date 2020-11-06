@@ -1,5 +1,12 @@
 <div>
-   
+    <h1>rating stars</h1>
+    <div class="rating">
+        <input type="radio" name="star" id="star1"><label for="star1"></label>
+        <input type="radio" name="star" id="star2"><label for="star2"></label>
+        <input type="radio" name="star" id="star3"><label for="star3"></label>
+        <input type="radio" name="star" id="star4"><label for="star4"></label>
+        <input type="radio" name="star" id="star5"><label for="star5"></label>
+    </div>
 <div class="feed-list-item">
     <h1 class="h1" >Your feedback is extremely important to us.</h1>
     <h2 class="h2"> Telling us about your experience, and your suggestions</h2>
@@ -12,8 +19,10 @@
 <hr>
 <div *ngFor="let comments of postComment">
     <p>{{comments}}</p>
+  
 </div>
-</div></div>
+</div>
+</div>
 
 <!-- <div class="feed-list-item" *ngFor="let customer of customers">
     <h1 >name : {{customer.name}}</h1>
