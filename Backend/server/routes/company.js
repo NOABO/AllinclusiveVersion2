@@ -55,29 +55,29 @@ const loginschema = Joi.object({
 
 router.post("/login", async (req, res, next) => {
   console.log("from server", req.body);
-  // //check if user already exist
-  // try {
-  //   const { error } = await loginschema.validateAsync(req.body);
-  //   const company = await Company.findOne({
-  //     emailCompany: req.body.emailCompany,
-  //   });
-  //   if (!company) return res.status(200).json({});
+  //check if user already exist
+  try {
+    const { error } = await loginschema.validateAsync(req.body);
+    const company = await Company.findOne({
+      emailCompany: req.body.emailCompany,
+    });
+    if (!company) return res.status(200).json({});
 
-  //   //check password
-  //   const validPass = await bcrypt.compare(
-  //     req.body.passwordCompany,
-  //     company.passwordCompany
-  //   );
-  //   if (!validPass) return res.status(200).json({});
+    //check password
+    const validPass = await bcrypt.compare(
+      req.body.passwordCompany,
+      company.passwordCompany
+    );
+    if (!validPass) return res.status(200).json({});
 
-  //   //create and assign a token
-  //   // const token = jwt.sign({ _id: company._id }, config.get("jwt").secret);
-  //   // res.header("auth-token", token).json(company);
-  // } catch (error) {
-  //   console.log(error);
-  //   if (error.isJoi === true) res.status(400).send(error.details[0].message);
-  //   next(error);
-  // }
+    //create and assign a token
+    const token = jwt.sign({ _id: company._id }, config.get("jwt").secret);
+    res.header("auth-token", token).json(company);
+  } catch (error) {
+    console.log(error);
+    if (error.isJoi === true) res.status(400).send(error.details[0].message);
+    next(error);
+  }
 });
 
 router.get("/", async (req, res) => {
