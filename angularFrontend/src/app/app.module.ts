@@ -18,13 +18,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { LikeComponent } from './component/like/like.component';
 import { ChatbotComponent } from './component/chatbot/chatbot.component';
-
-
-
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EventsMadeComponent } from './events-made/events-made.component';
 
 @NgModule({
@@ -37,13 +32,11 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-   HomeComponent,
-   AboutUsComponent,
-   LikeComponent,
-   ChatbotComponent
-  
+    HomeComponent,
+    AboutUsComponent,
+    LikeComponent,
+    ChatbotComponent,
     EventsMadeComponent,
-
     LoginCustomerComponent,
     LoginCompanyComponent,
   ],

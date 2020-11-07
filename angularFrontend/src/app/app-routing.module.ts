@@ -9,7 +9,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
-
+import {EventsMadeComponent} from './events-made/events-made.component';
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -21,10 +21,10 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login-customer', component: LoginCustomerComponent },
   { path: 'login-company', component: LoginCompanyComponent },
-    {path:'about', component:AboutUsComponent},
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {path: '', component:LikeComponent}
-  
+  {path:'about', component:AboutUsComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  {path: '', component:LikeComponent},
+  {path: 'events-made',component: EventsMadeComponent}
 
 
 ];
