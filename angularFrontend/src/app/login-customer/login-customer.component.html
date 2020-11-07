@@ -1,5 +1,31 @@
 <p>login as customer :</p>
 <div>
+<p>email</p>
+<i id="icon" class="material-icons prefix" > email</i>
+<input
+  type="text"
+  id="type"
+  class="form-control"
+  placeholder="enter your email"
+/>
+<p>password</p>
+<i id="icon" class="material-icons prefix">vpn_key</i>
+<input
+  type="password"
+  id="name"
+  class="form-control"
+  placeholder="enter your password"
+/>
+<br />
+<br />
+<button class="btn" type="submit" (click)="handleCustomerButton('event-customer')">Login</button>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<button class="btn" type="submit" (click)="handleCreateAccountButton('customer')">Create new account</button>
   <p>email</p>
   <input type="email" id="email" class="form-control" placeholder="email" required="" [(ngModel)]="email" required />
   <p>password</p>

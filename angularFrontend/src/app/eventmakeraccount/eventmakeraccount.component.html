@@ -8,33 +8,98 @@
   <h3>Add an event</h3>
   <div>
     <p>Event Type</p>
-    <input #EventType type="text" placeholder="Event Type" [(ngModel)]="Etype" required/>
+    <input
+      #EventType
+      type="text"
+      placeholder="Event Type"
+      [(ngModel)]="Etype"
+      required
+    />
     <p>Event Name</p>
-    <input #EventName type="text" placeholder="Event Name"  [(ngModel)]="Ename" required/>
+    <input
+      #EventName
+      type="text"
+      placeholder="Event Name"
+      [(ngModel)]="Ename"
+      required
+    />
     <p>Event description</p>
-    <input #desc type="text" placeholder="write descrption" [(ngModel)]="Edescription" required/>
+    <input
+      #desc
+      type="text"
+      placeholder="write descrption"
+      [(ngModel)]="Edescription"
+      required
+    />
     <p>Event date</p>
-    <input #EventDate type="datetime-local" placeholder="Event Date"  [(ngModel)]="Edate" required/>
+    <input
+      #EventDate
+      type="datetime-local"
+      placeholder="Event Date"
+      [(ngModel)]="Edate"
+      required
+    />
     <p>Location</p>
-    <input #Location type="text" placeholder="Location"  [(ngModel)]="Eplace" required/>
+    <input
+      #Location
+      type="text"
+      placeholder="Location"
+      [(ngModel)]="Eplace"
+      required
+    />
     <div>
-    <p>Enter location coordinates here(Case Sensitive Without QUOTES)</p>
-    <a href="https://www.google.com/maps/@36.831232,10.1974016,13z" target="_blank">Find Your Location Coords</a><br>
-    <input #coor type="text" placeholder="coords"   [(ngModel)]="ElocURL" required/>
-    <button (click)="addMarker(coor.value)">Add Marker</button><br>
-            <div #Gmap class="Gmap"></div>
-  </div><br>
+      <p>Enter location coordinates here(Case Sensitive Without QUOTES)</p>
+      <a
+        href="https://www.google.com/maps/@36.831232,10.1974016,13z"
+        target="_blank"
+        >Find Your Location Coords</a
+      ><br />
+      <input
+        #coor
+        type="text"
+        placeholder="coords"
+        [(ngModel)]="ElocURL"
+        required
+      />
+      <button (click)="addMarker(coor.value)">Add Marker</button><br />
+      <div #Gmap class="Gmap"></div>
+    </div>
+    <br />
     <p>Price per Person</p>
-    <input #Price type="number" value="500" min="10" step="1" data-number-to-fixed="2" data-number-stepfactor="100" placeholder="Price per person"  [(ngModel)]="Eprice" required/>
+    <input
+      #Price
+      type="number"
+      value="500"
+      min="10"
+      step="1"
+      data-number-to-fixed="2"
+      data-number-stepfactor="100"
+      placeholder="Price per person"
+      [(ngModel)]="Eprice"
+      required
+    />
     <p>put your video src here (Case Sensitive Without QUOTES)</p>
     <div>
-      <input #video type="text" placeholder="video source"  [(ngModel)]="EvidURL" required/>
+      <input
+        #video
+        type="text"
+        placeholder="video source"
+        [(ngModel)]="EvidURL"
+        required
+      />
       <button class="btn" (click)="add(video.value)">
         add event related video
       </button>
     </div>
     <div #video class="showVideo"></div>
     <br />
-    <button class="btn" (click)="onSubmit1()">Submit Event</button>
+    <input
+      #sig
+      type="text"
+      placeholder="special signature"
+      [(ngModel)]="Esignature"
+      required
+    />
+    <button class="btn" (click)="onSubmit1('events-made')">Submit Event</button>
   </div>
 </div>

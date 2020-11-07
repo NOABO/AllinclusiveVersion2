@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { HttpService } from '../http.service';
 @Component({
   selector: 'app-eventmakeraccount',
   templateUrl: './eventmakeraccount.component.html',
@@ -14,8 +14,9 @@ export class EventmakeraccountComponent implements OnInit {
   Eplace: string = '';
   ElocURL: string = '';
   Eprice: string = '';
-  EvidURL: String = '';
-  constructor(private _http: HttpService, private router: Router) { }
+  EvidURL:  string='' ;
+  Esignature:string='';
+  constructor(private _http: HttpService,private router: Router) {}
 
   ngOnInit(): void { }
   title = 'video';
@@ -48,26 +49,28 @@ export class EventmakeraccountComponent implements OnInit {
                     aria-hidden="false"
                     tabindex="0"> 
             </iframe> `
-  }
-
-  onSubmit1() {
+}
+//saving to database
+onSubmit1(pageName: string):void{
+  this.router.navigate([`${pageName}`]);
     this._http
-      .onRRRR(
-        this.Etype,
-        this.Ename,
-        this.Edescription,
-        this.Edate,
-        this.Eplace,
-        this.ElocURL,
-        this.Eprice,
-        this.EvidURL
+  .onRRRR(
+    this.Etype,
+    this.Ename,
+    this.Edescription,
+    this.Edate,
+    this.Eplace,
+    this.ElocURL,
+    this.Eprice,
+    this.EvidURL,
+    this.Esignature
+  )
+  .subscribe((r) => {
+    console.log(r,'this is the body send');
+  });
 
-      )
-      .subscribe((data) => {
-        console.log(data);
-      });
-
-  }
+     
+        }
 
 }
 

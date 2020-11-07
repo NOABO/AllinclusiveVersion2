@@ -54,26 +54,28 @@ const loginschema = Joi.object({
 });
 
 router.post("/login", async (req, res, next) => {
-  console.log("from server", req.body);
-  //check if user already exist
+  // console.log("from server", req.body);
+  // //check if user already exist
   try {
     const { error } = await loginschema.validateAsync(req.body);
     const company = await Company.findOne({
       emailCompany: req.body.emailCompany,
-    });
-    if (!company) return res.status(400).send("Email or password is wrong");
+    }).then(data => console.log(data, 'from the database'))
+
+    if (!company) return res.send("Email or password is wrong");
 
     //check password
     const validPass = await bcrypt.compare(
       req.body.passwordCompany,
       company.passwordCompany
     );
-    if (!validPass) return res.status(400).send("password not valid");
+    if (!validPass) return res.send("password not valid");
 
     //create and assign a token
     const token = jwt.sign({ _id: company._id }, config.get("jwt").secret);
     res.header("auth-token", token).json(company);
-  } catch (error) {
+  }
+  catch (error) {
     console.log(error);
     if (error.isJoi === true) res.status(400).send(error.details[0].message);
     next(error);
