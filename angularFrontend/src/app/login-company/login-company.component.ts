@@ -7,14 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-company.component.css'],
 })
 export class LoginCompanyComponent implements OnInit {
+  nameusercomoany: "";
+  emailusercompany: "";
+
   constructor(private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+   
+  }
+
+  onChange(e) {
+    this.nameusercomoany = e.target.value
+  };
 
   // redirection to the company component
   handleCompanyButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
-  }
+  };
+  
   // redirection to the login-company component
   handleCreateAccountButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);

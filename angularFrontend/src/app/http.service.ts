@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) {}
-  
+  constructor(private http: HttpClient) { }
+
   onsubmit(
     type: string,
     name: string,
@@ -25,7 +26,7 @@ export class HttpService {
       adress,
       imgUrlCompany,
     });
-  }
+  };
 
   onclick(
     type: string,
@@ -48,25 +49,36 @@ export class HttpService {
       imgUrl,
     });
   }
+
   onRRRR(
-    Etype: string ,
-    Ename: string ,
-    Edescription: string ,
-    Edate: string ,
-    Eplace: string ,
-    ElocURL: string ,
-    Eprice: string ,
-    EvidURL:  String
+    Etype: string,
+    Ename: string,
+    Edescription: string,
+    Edate: string,
+    Eplace: string,
+    ElocURL: string,
+    Eprice: string,
+    EvidURL: String
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
-    Etype,
-    Ename,
-    Edescription,
-    Edate,
-    Eplace ,
-    ElocURL ,
-    Eprice ,
-    EvidURL,
+      Etype,
+      Ename,
+      Edescription,
+      Edate,
+      Eplace,
+      ElocURL,
+      Eprice,
+      EvidURL,
     });
+  }
+  onCheck(
+    email:String,
+    password:String
+  ){
+
+    return this.http.post('http://localhost:5000/api/user/login', {
+      email,
+      password
+    })
   }
 }

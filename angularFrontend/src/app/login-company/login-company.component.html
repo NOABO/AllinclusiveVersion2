@@ -1,16 +1,16 @@
-<p>login-company works!</p>
+<p>login as company:</p>
 <div>
   <p>email</p>
-  <input
+  <input (change)="onChange($event)"
     type="text"
-    id="type"
+    id="email"
     class="form-control"
     placeholder="enter your email"
   />
   <p>password</p>
   <input
     type="password"
-    id="name"
+    id="password"
     class="form-control"
     placeholder="enter your password"
   />
@@ -21,6 +21,9 @@
   >
     Login
   </button>
+  <br>
+  <br>
+  <p>if not register ?</p>
   <button
     class="btn"
     type="submit"
