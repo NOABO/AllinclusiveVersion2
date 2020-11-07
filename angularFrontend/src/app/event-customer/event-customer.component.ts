@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-customer.component.css']
 })
 export class EventCustomerComponent implements OnInit {
-
+  numberOfLikes : number=0;
   constructor() { }
 
   ngOnInit(): void {
   }
   title = "image";
   currentVal = "";
+  
 
 addImg(val) {
 
@@ -26,5 +27,14 @@ this.currentVal=val
                   />`
                 
       document.querySelector('.imgHolder').appendChild(imgH); 
+  }
+ 
+  likeButtonClick(val) {
+    this.numberOfLikes++;
+    console.log(this.numberOfLikes)
+  }
+  dislikeButtonClick() {
+    this.numberOfLikes--;
+    console.log(this.numberOfLikes)
   }
 }
