@@ -1,26 +1,30 @@
 <p>login-company works!</p>
 <div>
-  <p>email</p>
   <input
     type="text"
-    id="type"
-    class="form-control"
-    placeholder="enter your email"
+    id="LoginFormEmail"
+    class="form-control mb-4"
+    placeholder="E-mail"
+    required
+    [(ngModel)]="emailCompany"
+    name="emailCompany"
   />
-  <p>password</p>
+
+  <!-- Password -->
   <input
-    type="password"
-    id="name"
-    class="form-control"
-    placeholder="enter your password"
+    type="text"
+    id="LoginFormPassword"
+    class="form-control mb-4"
+    placeholder="Password"
+    required
+    [(ngModel)]="passwordCompany"
+    name="passwordCompany"
   />
-  <button
-    class="btn"
-    type="submit"
-    (click)="handleCompanyButton('eventmakeraccount')"
-  >
-    Login
+
+  <button class="btn btn-info btn-block my-4" (click)="save()" type="submit">
+    Sign in
   </button>
+
   <button
     class="btn"
     type="submit"
