@@ -71,4 +71,27 @@ export class HttpService {
     Esignature
     });
   }
+  showE(
+    Etype: string ,
+    Ename: string ,
+    Edescription: string ,
+    Edate: string ,
+    Eplace: string ,
+    ElocURL: string ,
+    Eprice: string ,
+    EvidURL: string,
+    Esignature: string,
+  ) {
+    return this.http.post('http://localhost:5000/api/event/add', {
+    Etype,
+    Ename,
+    Edescription,
+    Edate,
+    Eplace ,
+    ElocURL ,
+    Eprice ,
+    EvidURL,
+    Esignature
+    });
+  }
 }
