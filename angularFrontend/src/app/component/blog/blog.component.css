@@ -48,3 +48,48 @@ body {
   h2{
     font-size: 20px;
   }
+
+  .rating{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateY(180deg);
+    display: flex;
+  }
+
+  .rating label{
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    background: transparent;
+  }
+
+  .rating label:before{
+    content: '\f005';
+    /* font-family: fontAwesome; */
+    position: relative;
+    display: block;
+    font-size: 50px;
+    color:transparent;
+  }
+
+  .rating label:after{
+    content: '\f005';
+    /* font-family: fontAwesome; */
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    color:transparent;
+    top: 0;
+    opacity: 0;
+    transition: .5s;
+    text-shadow: 0 2px 5px rgb(0,0,0,.5);
+  }
+  .rating label:hover:after,
+  .rating label:hover ~ label:after,
+  .rating input:checked ~ label:after{
+    opacity: 1;
+  }
+
+  
+  

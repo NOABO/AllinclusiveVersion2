@@ -36,8 +36,6 @@ router.post("/add", async (req, res, next) => {
 
 
       type: req.body.type,
-
- 
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,

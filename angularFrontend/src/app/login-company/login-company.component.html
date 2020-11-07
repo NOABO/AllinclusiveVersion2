@@ -2,19 +2,29 @@
 <div>
   <p>email</p>
   <i id="icon" class="material-icons prefix" > email</i>
+
   <input
     type="text"
-    id="type"
-    class="form-control"
-    placeholder="enter your email"
+    id="passwordCompany"
+    class="form-control mb-4"
+    placeholder="E-mail"
+    required=""
+    [(ngModel)]="emailCompany"
+    required
   />
   <p>password</p>
   <i id="icon" class="material-icons prefix">vpn_key</i>
+  <br />
+
+  <!-- Password -->
   <input
-    type="password"
-    id="name"
-    class="form-control"
-    placeholder="enter your password"
+    type="text"
+    id="passwordCompany"
+    class="form-control mb-4"
+    placeholder="Password"
+    required=""
+    [(ngModel)]="passwordCompany"
+    required
   />
   <br />
 <br />
@@ -31,6 +41,11 @@
 <br />
 <br />
 <br />
+
+  <button class="btn btn-info btn-block my-4" (click)="save()" type="submit">
+    Sign in
+  </button>
+
   <button
     class="btn"
     type="submit"
