@@ -1,9 +1,41 @@
 <p>login-company works!</p>
 <div>
   <p>email</p>
-  <input type="text" id="type" class="form-control" placeholder="enter your email" />
+  <i id="icon" class="material-icons prefix" > email</i>
+  <input
+    type="text"
+    id="type"
+    class="form-control"
+    placeholder="enter your email"
+  />
   <p>password</p>
-  <input type="password" id="name" class="form-control" placeholder="enter your password" />
-  <button class="btn" type="submit" (click)="handleCompanyButton('eventmakeraccount')">Login</button>
-  <button class="btn" type="submit" (click)="handleCreateAccountButton('company')">Create new account</button>
+  <i id="icon" class="material-icons prefix">vpn_key</i>
+  <input
+    type="password"
+    id="name"
+    class="form-control"
+    placeholder="enter your password"
+  />
+  <br />
+<br />
+  <button
+    class="btn"
+    type="submit"
+    (click)="handleCompanyButton('eventmakeraccount')"
+  >
+    Login
+  </button>
+  <br />
+<br />
+<br />
+<br />
+<br />
+<br />
+  <button
+    class="btn"
+    type="submit"
+    (click)="handleCreateAccountButton('company')"
+  >
+    Create new account
+  </button>
 </div>
