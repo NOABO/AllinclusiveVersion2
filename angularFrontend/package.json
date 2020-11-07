@@ -22,10 +22,14 @@
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@ngmodule/material-carousel": "^0.6.0",
+    "@types/gapi.auth2": "0.0.52",
     "firebase": "^8.0.1",
     "font-awesome": "^4.7.0",
+    "jsonwebtoken": "^8.5.1",
     "moment": "^2.29.1",
+
     "@types/gapi.auth2": "0.0.52",
+
     "nodemailer": "^6.4.14",
     "nodemailer-smtp-transport": "^2.7.4",
     "rxjs": "~6.6.0",
