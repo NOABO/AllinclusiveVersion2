@@ -16,12 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 import { EventsMadeComponent } from './events-made/events-made.component';
-
-
-
 
 
 @NgModule({
@@ -34,11 +31,11 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
+    ContactUsComponent,
     HomeComponent,
     EventsMadeComponent,
-    ContactUsComponent,
     LoginCustomerComponent,
-    LoginCompanyComponent
+    LoginCompanyComponent,
 
     ],
   imports: [

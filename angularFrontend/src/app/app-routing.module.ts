@@ -9,8 +9,10 @@ import { LoginCustomerComponent } from './login-customer/login-customer.componen
 import { LoginCompanyComponent } from './login-company/login-company.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  
 
   { path: 'company', component: CompanyComponent },
   { path: 'customer', component: CustomerComponent },
@@ -20,7 +22,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login-customer', component: LoginCustomerComponent },
   { path: 'login-company', component: LoginCompanyComponent },
-  { path: "contact-us", component: ContactUsComponent }
+  { path:"contact-us" , component:ContactUsComponent}
 ];
 
 @NgModule({
@@ -28,4 +30,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
