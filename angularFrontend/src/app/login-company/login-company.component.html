@@ -2,23 +2,24 @@
 <div>
   <input
     type="text"
-    id="LoginFormEmail"
+    id="passwordCompany"
     class="form-control mb-4"
     placeholder="E-mail"
-    required
+    required=""
     [(ngModel)]="emailCompany"
-    name="emailCompany"
+    required
   />
+  <br />
 
   <!-- Password -->
   <input
     type="text"
-    id="LoginFormPassword"
+    id="passwordCompany"
     class="form-control mb-4"
     placeholder="Password"
-    required
+    required=""
     [(ngModel)]="passwordCompany"
-    name="passwordCompany"
+    required
   />
 
   <button class="btn btn-info btn-block my-4" (click)="save()" type="submit">

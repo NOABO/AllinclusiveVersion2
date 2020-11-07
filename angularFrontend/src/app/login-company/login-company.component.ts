@@ -8,17 +8,16 @@ import { CompanyService } from 'src/app/services/company.services';
   styleUrls: ['./login-company.component.css'],
 })
 export class LoginCompanyComponent implements OnInit {
-  company = {
-    emailCompany: '',
-    passwordCompany: '',
-  };
+  emailCompany: String = '';
+  companyName: String = '';
+  passwordCompany: String = '';
   constructor(private router: Router, private CompanyService: CompanyService) {}
 
   ngOnInit(): void {}
   save() {
     const data = {
-      emailCompany: this.company.emailCompany,
-      passwordCompany: this.company.passwordCompany,
+      emailCompany: this.emailCompany,
+      passwordCompany: this.passwordCompany,
     };
     console.log(data);
     this.CompanyService.createLogin(data).subscribe((res) => console.log(res));
