@@ -1,77 +1,29 @@
 <p>login as company:</p>
 <div>
   <p>email</p>
-<<<<<<< HEAD
-  <input (change)="onChange($event)"
-    type="text"
-    id="email"
-    class="form-control"
-    placeholder="enter your email"
-=======
-  <i id="icon" class="material-icons prefix" > email</i>
+  <i id="icon" class="material-icons prefix"> email</i>
 
-  <input
-    type="text"
-    id="passwordCompany"
-    class="form-control mb-4"
-    placeholder="E-mail"
-    required=""
-    [(ngModel)]="emailCompany"
-    required
->>>>>>> be6caf74a84d1a0ea4a8db6c7792ea9df481cb4d
-  />
+  <input type="text" id="passwordCompany" class="form-control mb-4" placeholder="E-mail" required=""
+    [(ngModel)]="emailCompany" required />
   <p>password</p>
   <i id="icon" class="material-icons prefix">vpn_key</i>
   <br />
 
   <!-- Password -->
-  <input
-<<<<<<< HEAD
-    type="password"
-    id="password"
-    class="form-control"
-    placeholder="enter your password"
-=======
-    type="text"
-    id="passwordCompany"
-    class="form-control mb-4"
-    placeholder="Password"
-    required=""
-    [(ngModel)]="passwordCompany"
-    required
->>>>>>> be6caf74a84d1a0ea4a8db6c7792ea9df481cb4d
-  />
+  <input type="text" id="passwordCompany" class="form-control mb-4" placeholder="Password" required=""
+    [(ngModel)]="passwordCompany" required />
   <br />
-<br />
-  <button
-    class="btn"
-    type="submit"
-    (click)="handleCompanyButton('eventmakeraccount')"
-  >
+  <br />
+  <button class="btn" type="submit" (click)="handleCompanyButton('eventmakeraccount')">
     Login
   </button>
-<<<<<<< HEAD
-  <br>
-  <br>
-  <p>if not register ?</p>
-=======
   <br />
-<br />
-<br />
-<br />
-<br />
-<br />
-
+  <br />
   <button class="btn btn-info btn-block my-4" (click)="save()" type="submit">
     Sign in
   </button>
 
->>>>>>> be6caf74a84d1a0ea4a8db6c7792ea9df481cb4d
-  <button
-    class="btn"
-    type="submit"
-    (click)="handleCreateAccountButton('company')"
-  >
+  <button class="btn" type="submit" (click)="handleCreateAccountButton('company')">
     Create new account
   </button>
 </div>

@@ -8,21 +8,6 @@ import { CompanyService } from 'src/app/services/company.services';
   styleUrls: ['./login-company.component.css'],
 })
 export class LoginCompanyComponent implements OnInit {
-<<<<<<< HEAD
-  nameusercomoany: "";
-  emailusercompany: "";
-
-  constructor(private router: Router) {}
-
-  ngOnInit(): void {
-   
-  }
-
-  onChange(e) {
-    this.nameusercomoany = e.target.value
-  };
-
-=======
   emailCompany: String = '';
   companyName: String = '';
   passwordCompany: String = '';
@@ -37,7 +22,6 @@ export class LoginCompanyComponent implements OnInit {
     console.log(data);
     this.CompanyService.createLogin(data).subscribe((res) => console.log(res));
   }
->>>>>>> be6caf74a84d1a0ea4a8db6c7792ea9df481cb4d
   // redirection to the company component
   handleCompanyButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
