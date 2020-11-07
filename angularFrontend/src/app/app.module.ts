@@ -14,14 +14,14 @@ import { HomeComponent } from './component/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AboutUsComponent } from './component/about-us/about-us.component';
+import { LikeComponent } from './component/like/like.component';
+import { ChatbotComponent } from './component/chatbot/chatbot.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
-
-
+import { CommonModule } from '@angular/common';
 import { EventsMadeComponent } from './events-made/events-made.component';
-import { AboutUsComponent } from './component/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +33,9 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
     EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-
    HomeComponent,
-   AboutUsComponent,
    LikeComponent,
    ChatbotComponent,
-  
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
