@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const app = express();
 app.use(cors());
 const PORT = 5000;
+const jwt = require("jsonwebtoken");
+const config = require('config');
+
 
 
 app.use(bodyParser.json());

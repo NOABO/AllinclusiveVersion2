@@ -20,6 +20,7 @@ import { LikeComponent } from './component/like/like.component';
 import { ChatbotComponent } from './component/chatbot/chatbot.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
+import { CommonModule } from '@angular/common';
 import { EventsMadeComponent } from './events-made/events-made.component';
 
 @NgModule({
@@ -32,13 +33,13 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-    HomeComponent,
-    AboutUsComponent,
-    LikeComponent,
-    ChatbotComponent,
+   HomeComponent,
+   LikeComponent,
+   ChatbotComponent,
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +49,7 @@ import { EventsMadeComponent } from './events-made/events-made.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatCarouselModule.forRoot(),
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
