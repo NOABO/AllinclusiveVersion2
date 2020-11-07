@@ -19,7 +19,7 @@ import { CommonModule } from '@angular/common';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { EventsMadeComponent } from './events-made/events-made.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 
@@ -33,7 +33,12 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
     EventmakeraccountComponent,
     EMeventsComponent,
     BlogComponent,
-    HomeComponent,
+
+   HomeComponent,
+   AboutUsComponent,
+   LikeComponent,
+   ChatbotComponent,
+  
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
