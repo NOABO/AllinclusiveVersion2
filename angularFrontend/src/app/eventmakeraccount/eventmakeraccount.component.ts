@@ -15,6 +15,7 @@ export class EventmakeraccountComponent implements OnInit {
   ElocURL: string = '';
   Eprice: string = '';
   EvidURL:  string='' ;
+  Esignature:string='';
   constructor(private _http: HttpService,private router: Router) {}
 
   ngOnInit(): void {}
@@ -61,7 +62,8 @@ onSubmit1(pageName: string):void{
     this.Eplace,
     this.ElocURL,
     this.Eprice,
-    this.EvidURL
+    this.EvidURL,
+    this.Esignature
   )
   .subscribe((r) => {
     console.log(r,'this is the body send');

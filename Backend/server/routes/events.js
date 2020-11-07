@@ -27,7 +27,8 @@ router.post("/add", async (req, res) => {
     Eplace: req.body.Eplace,
     ElocURL: req.body.ElocURL ,
     Eprice: req.body.Eprice ,
-    EvidURL:req.body.EvidURL
+    EvidURL:req.body.EvidURL,
+    Esignature: req.body.Esignature ,
   });
   await newEvent.save(() => {
     
