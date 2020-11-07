@@ -24,7 +24,7 @@ import { ChatbotComponent } from './component/chatbot/chatbot.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { EventsMadeComponent } from './events-made/events-made.component';
 
 @NgModule({
@@ -40,7 +40,7 @@ import { EventsMadeComponent } from './events-made/events-made.component';
    HomeComponent,
    AboutUsComponent,
    LikeComponent,
-   ChatbotComponent
+   ChatbotComponent,
   
     EventsMadeComponent,
 
