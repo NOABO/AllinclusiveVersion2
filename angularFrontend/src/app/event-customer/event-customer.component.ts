@@ -6,14 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./event-customer.component.css']
 })
 export class EventCustomerComponent implements OnInit {
-
+  numberOfLikes : number=0;
   constructor() { }
 
   ngOnInit(): void {
   }
   title = "image";
   currentVal = "";
-  numberOfLikes : 0;
+  
 
 addImg(val) {
 
@@ -30,7 +30,6 @@ this.currentVal=val
   }
  
   likeButtonClick(val) {
-    this.numberOfLikes= val;
     this.numberOfLikes++;
     console.log(this.numberOfLikes)
   }
