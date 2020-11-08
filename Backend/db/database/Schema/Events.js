@@ -6,9 +6,9 @@ const eventSchema = new mongoose.Schema(
     Edescription: { type: String, required: true },
     Edate: { type: String, required: true },
     Eplace: { type: String, required: true },
-    ElocURL: { type: URL, required: true },
+    ElocURL: { type: String, required: true },
     Eprice: { type: String, required: true },
-    EvidURL: { type: URL, required: true },
+    EvidURL: { type: String, required: true },
     Esignature: { type: String, required: true },
   },
   {

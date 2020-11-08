@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-event-customer',
   templateUrl: './event-customer.component.html',
@@ -8,18 +9,17 @@ import { HttpService } from '../http.service';
 export class EventCustomerComponent implements OnInit {
   numberOfLikes : number=0;
   products = [];
-  
-  
-  constructor(private _http: HttpService) { }
+
+  constructor(private _http: HttpService, private _sanitizationService: DomSanitizer) { }
 
   ngOnInit(): void {
     this._http.sendGetRequest().subscribe((data: any[]) => {
-      console.log(data);
+      console.log(data[0].EvidURL);
       this.products = data;
-      
+
     })  
   }
-//   title = "image";
+  // title = "image";
 //   currentVal = "";
   
 
