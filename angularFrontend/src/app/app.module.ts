@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
@@ -36,6 +37,7 @@ import { HomeComponent } from './component/home/home.component';
     AboutUsComponent,
     HomeComponent,
   ],
+
 
   imports: [
     BrowserModule,
