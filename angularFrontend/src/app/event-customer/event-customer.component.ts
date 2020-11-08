@@ -9,13 +9,14 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class EventCustomerComponent implements OnInit {
   numberOfLikes : number=0;
   products = [];
-
+  // urls =[];
   constructor(private _http: HttpService, private _sanitizationService: DomSanitizer) { }
 
   ngOnInit(): void {
     this._http.sendGetRequest().subscribe((data: any[]) => {
       console.log(data[0].EvidURL);
       this.products = data;
+      
 
     })  
   }
