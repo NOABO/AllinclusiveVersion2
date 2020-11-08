@@ -11,9 +11,6 @@ import { EMeventsComponent } from './emevents/emevents.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginCustomerComponent } from './login-customer/login-customer.component';
-import { LoginCompanyComponent } from './login-company/login-company.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
@@ -21,7 +18,6 @@ import { LoginCompanyComponent } from './login-company/login-company.component';
 import { CommonModule } from '@angular/common';
 import { EventsMadeComponent } from './events-made/events-made.component';
 import { HomeComponent } from './component/home/home.component';
-
 
 @NgModule({
   declarations: [
@@ -37,8 +33,6 @@ import { HomeComponent } from './component/home/home.component';
     AboutUsComponent,
     HomeComponent,
   ],
-
-
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -52,4 +46,4 @@ import { HomeComponent } from './component/home/home.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

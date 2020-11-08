@@ -2,14 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
 
-
 @Component({
   selector: 'app-login-customer',
   templateUrl: './login-customer.component.html',
   styleUrls: ['./login-customer.component.css'],
 })
 export class LoginCustomerComponent implements OnInit {
-  
+
   email: String = "" ;
   password: String = "" ;
   constructor(private _http: HttpService,private router: Router) {}
@@ -20,7 +19,6 @@ export class LoginCustomerComponent implements OnInit {
   handleCustomerButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
   }
-
 
   checkLoginCustomer(pageName: string): void {
     this.router.navigate([`${pageName}`]);

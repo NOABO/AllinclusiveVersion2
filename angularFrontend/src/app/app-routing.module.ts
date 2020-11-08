@@ -4,7 +4,6 @@ import { CompanyComponent } from './company/company.component';
 import { AboutUsComponent } from './component/about-us/about-us.component';
 import { CustomerComponent } from './customer/customer.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
 
@@ -20,7 +19,8 @@ const routes: Routes = [
   { path: 'eventmakeraccount', component: EventmakeraccountComponent },
   { path: 'login-customer', component: LoginCustomerComponent },
   { path: 'login-company', component: LoginCompanyComponent },
-  { path: 'about', component: AboutUsComponent },
+  {path:'about', component:AboutUsComponent},
+
 
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'events-made',component: EventsMadeComponent},
@@ -34,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

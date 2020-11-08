@@ -19,7 +19,6 @@ export class EventmakeraccountComponent implements OnInit {
   EvidURL:  string='' ;
   Esignature:string='';
   constructor(private _http: HttpService,private router: Router) {}
-  
   ngOnInit(): void { }
   title = 'video';
   currentVal = '';
@@ -36,7 +35,6 @@ export class EventmakeraccountComponent implements OnInit {
               </iframe>
                 `;
   }
-
   markerTitle = 'marker';
   currentMarker = '';
 
