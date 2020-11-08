@@ -1,15 +1,16 @@
 <p>Events posted by you</p>
 <button id="events" (click)="showEvents()">My events</button>
-<div class="events">
-  <p>event type:</p>
-  <p>event name :</p>
-  <p>description:</p>
-  <p>event date:</p>
-
+<div class="events" *ngFor="let event of data ">
+  <div>
+  <p>event type:{{event.Etype}}</p>
+  <p>event name :{{event.Ename}}</p>
+  <p>description:{{event.Edescription}}</p>
+  <p>event date:{{event.Edate}}</p>
+  <p>event Price:{{event.Eprice}}</p>
   <div class="location map"></div>
   <p>event location</p>
   <iframe
-    src=""
+    src="{{event.ElocURL}}"
     width="400"
     height="300"
     frameborder="0"
@@ -21,5 +22,6 @@
   </iframe>
 </div>
 <div class="video">
-  <iframe width="640" height="480" controls src=""> </iframe>
+  <iframe width="640" height="480" controls src="{{event.EvidURL}}"> </iframe>
+</div>
 </div>
