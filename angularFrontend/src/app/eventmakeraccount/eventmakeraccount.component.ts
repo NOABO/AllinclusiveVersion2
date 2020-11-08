@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
+
 @Component({
   selector: 'app-eventmakeraccount',
   templateUrl: './eventmakeraccount.component.html',
@@ -14,10 +15,11 @@ export class EventmakeraccountComponent implements OnInit {
   Eplace: string = '';
   ElocURL: string = '';
   Eprice: string = '';
+
   EvidURL:  string='' ;
   Esignature:string='';
   constructor(private _http: HttpService,private router: Router) {}
-
+  
   ngOnInit(): void { }
   title = 'video';
   currentVal = '';
@@ -34,6 +36,7 @@ export class EventmakeraccountComponent implements OnInit {
               </iframe>
                 `;
   }
+
   markerTitle = 'marker';
   currentMarker = '';
 
@@ -53,8 +56,9 @@ export class EventmakeraccountComponent implements OnInit {
 //saving to database
 onSubmit1(pageName: string):void{
   this.router.navigate([`${pageName}`]);
-    this._http
-  .onRRRR(
+
+  this._http
+.onRRRR(
     this.Etype,
     this.Ename,
     this.Edescription,
@@ -67,10 +71,7 @@ onSubmit1(pageName: string):void{
   )
   .subscribe((r) => {
     console.log(r,'this is the body send');
-  });
-
-     
+  }); 
         }
-
 }
 

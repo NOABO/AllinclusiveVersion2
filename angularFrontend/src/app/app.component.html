@@ -21,6 +21,32 @@
 </header>
 
 
+<div> 
+<mat-carousel id="mat-carousel" timings="200ms ease-in" [autoplay]="true" interval="5000" color="accent" maxWidth="auto"
+  proportion="25" slides="5" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true"
+  [useMouseWheel]="false" orientation="ltr">
+  <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image"
+    overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
+</mat-carousel>
+</div>
+ <h1>want to chill ? choose your event here</h1>
+
+<div>
+  <h3>join as :</h3>
+  <button class="btn" (click)="handleLoginCompanyButton('login-company')"><i >Company</i></button>
+  <h3>join as :</h3>
+  <button class="btn" (click)="handleLoginButton('login-customer')"><i>Customer</i></button>
+</div> 
+
+<div id="components"><router-outlet ></router-outlet></div>
+<footer>
+    <div>
+      <img class='contactLogo' src="https://image.flaticon.com/icons/png/512/3128/3128322.png">   
+      <img class="fbLogo" src="https://image.flaticon.com/icons/svg/1312/1312139.svg">
+      <img class="gmailLogo" src="https://image.flaticon.com/icons/svg/2965/2965306.svg">
+      <p>Copyright &copy; 2020 The NOABO EVENTS.</p>
+    </div> 
+</footer>
 <div id="components">
   <router-outlet></router-outlet>
 </div>

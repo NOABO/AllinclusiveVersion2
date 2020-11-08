@@ -11,6 +11,7 @@ import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccoun
 import { HomeComponent } from './component/home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+
   { path: 'company', component: CompanyComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'event-customer', component: EventCustomerComponent },
@@ -23,10 +24,11 @@ const routes: Routes = [
   {path: 'home', component:HomeComponent}
 
 
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
