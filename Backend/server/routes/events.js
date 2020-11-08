@@ -16,9 +16,14 @@ router.get("/:id", async (req, res) => {
     res.json(data);
   });
 });
+router.post("/companyId", async (req, res) => {
+  await Event.find({companyId: req.body.companyId}, (err, data) => {
+    res.json(data);
+  });
+});
 
-router.post("/add", async (req, res) => {
-  
+router.post("/add", async (req, res,next) => {
+  console.log(req.body,'attempt2')
   const newEvent = new Event({
     Etype: req.body.Etype ,
     Ename: req.body.Ename ,
@@ -29,11 +34,14 @@ router.post("/add", async (req, res) => {
     Eprice: req.body.Eprice ,
     EvidURL:req.body.EvidURL,
     Esignature: req.body.Esignature ,
+    companyId:req.body.companyId
   });
   await newEvent.save(() => {
     
+    console.log(newEvent)
     res.json(newEvent);
-  });
+  })
+  
 });
 
 router.post("/addmany", async (req, res) => {

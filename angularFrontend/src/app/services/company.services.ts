@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class CompanyService {
   User: any;
-
+  
   constructor(private http: HttpClient) {}
 
   createLogin(data): Observable<any> {
@@ -22,4 +22,5 @@ export class CompanyService {
   public Save() {
     return this.User;
   }
+  
 }
