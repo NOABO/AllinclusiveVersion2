@@ -1,32 +1,44 @@
 <p>login-company works!</p>
 <div>
   <p>email</p>
-  <i id="icon" class="material-icons prefix" > email</i>
+  <i id="icon" class="material-icons prefix"> email</i>
+<div class="t">
+<div class="login">
+  <br>
+  <br>
+  <br>
+  <br>
+  <p class="e">Email</p>
+
 
   <input
     type="text"
     id="passwordCompany"
-    class="form-control mb-4"
     placeholder="E-mail"
     required=""
     [(ngModel)]="emailCompany"
     required
   />
-  <p>password</p>
-  <i id="icon" class="material-icons prefix">vpn_key</i>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p class="p">Password</p>
+  
   <br />
 
-  <!-- Password -->
   <input
     type="text"
     id="passwordCompany"
-    class="form-control mb-4"
     placeholder="Password"
     required=""
     [(ngModel)]="passwordCompany"
     required
   />
   <br />
+
+<br />
+<br />
 <br />
   <button
     class="btn"
@@ -36,21 +48,22 @@
     Login
   </button>
   <br />
-<br />
-<br />
+
 <br />
 <br />
 <br />
 
-  <button class="btn btn-info btn-block my-4" (click)="save()" type="submit">
+
+  <button id="h"class="btn btn-info btn-block my-4" (click)="save()" type="submit">
     Sign in
   </button>
 
-  <button
+  <button id="m"
     class="btn"
     type="submit"
     (click)="handleCreateAccountButton('company')"
   >
     Create new account
   </button>
+</div>
 </div>

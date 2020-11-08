@@ -29,7 +29,7 @@ this.currentVal=val
       document.querySelector('.imgHolder').appendChild(imgH); 
   }
  
-  likeButtonClick(val) {
+  likeButtonClick() {
     this.numberOfLikes++;
     console.log(this.numberOfLikes)
   }
