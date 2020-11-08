@@ -103,4 +103,8 @@ export class HttpService {
     return this.http.get('http://localhost:5000/api/event/eventsCustomer').pipe(retry(3), catchError(this.handleError));
   }
 
+  handleCustomerButton(){
+    return this.http.get('http://localhost:5000/api/user/')
+  }
+
 }

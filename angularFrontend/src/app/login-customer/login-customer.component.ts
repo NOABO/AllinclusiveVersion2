@@ -16,6 +16,7 @@ export class LoginCustomerComponent implements OnInit {
 
   // redirection to the customer component
   handleCustomerButton(pageName: string): void {
+    if(this._http)
     this.router.navigate([`${pageName}`]);
   }
 
