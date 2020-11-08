@@ -74,5 +74,8 @@ export class HttpService {
   getEvents(){
    return this.http.get('http://localhost:5000/api/event')
   }
-  
+  getEventsForCustomer(){
+    return this.http.get('http://localhost:5000/api/event')
+  }
 }
+
