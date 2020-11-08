@@ -61,6 +61,7 @@ export class HttpService {
     Eprice: string ,
     EvidURL: string,
     Esignature: string,
+
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
     Etype,
@@ -71,37 +72,14 @@ export class HttpService {
     ElocURL ,
     Eprice ,
     EvidURL,
+
     Esignature
     });
   }
   getEvents(){
    return this.http.get('http://localhost:5000/api/event')
   }
-  onCheck(
-    email:String,
-    password:String
-  ){
 
-    return this.http.post('http://localhost:5000/api/user/login', {
-      email,
-      password
-    })
-  }
-  handleError(error: HttpErrorResponse) {
-    let errorMessage = 'Unknown error!';
-    if (error.error instanceof ErrorEvent) {
-      // Client-side errors
-      errorMessage = `Error: ${error.error.message}`;
-    } else {
-      // Server-side errors
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    window.alert(errorMessage);
-    return throwError(errorMessage);
-  }
-  sendGetRequest(){
-    return this.http.get('http://localhost:5000/api/event/eventsCustomer').pipe(retry(3), catchError(this.handleError));
-  }
 
   handleCustomerButton(){
     return this.http.get('http://localhost:5000/api/user/')

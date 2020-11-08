@@ -8,6 +8,7 @@ import { HttpService } from '../http.service';
   styleUrls: ['./login-customer.component.css'],
 })
 export class LoginCustomerComponent implements OnInit {
+
   email: String = "" ;
   password: String = "" ;
   constructor(private _http: HttpService,private router: Router) {}
