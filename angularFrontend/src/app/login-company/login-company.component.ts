@@ -42,6 +42,7 @@ export class LoginCompanyComponent implements OnInit {
     };
     this.CompanyService.createLogin(company).subscribe((res: any) => {
       this.CompanyService.Check(res);
+      
       if (Object.keys(res).length) {
         Swal.fire({
           position: 'top-end',

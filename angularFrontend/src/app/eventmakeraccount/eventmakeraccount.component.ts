@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpService } from '../http.service';
-
+import { CompanyService } from 'src/app/services/company.services';
 @Component({
   selector: 'app-eventmakeraccount',
   templateUrl: './eventmakeraccount.component.html',
@@ -15,10 +15,10 @@ export class EventmakeraccountComponent implements OnInit {
   Eplace: string = '';
   ElocURL: string = '';
   Eprice: string = '';
-
   EvidURL:  string='' ;
   Esignature:string='';
-  constructor(private _http: HttpService,private router: Router) {}
+  
+  constructor(private _http: HttpService,private router: Router ,private companyService:CompanyService) {}
   ngOnInit(): void { }
   title = 'video';
   currentVal = '';
@@ -54,7 +54,8 @@ export class EventmakeraccountComponent implements OnInit {
 //saving to database
 onSubmit1(pageName: string):void{
   this.router.navigate([`${pageName}`]);
-
+  const companyId = this.companyService.Save()._id;
+  console.log(companyId)
   this._http
 .onRRRR(
     this.Etype,
@@ -65,7 +66,8 @@ onSubmit1(pageName: string):void{
     this.ElocURL,
     this.Eprice,
     this.EvidURL,
-    this.Esignature
+    this.Esignature,
+    companyId
   )
   .subscribe((r) => {
     console.log(r,'this is the body send');

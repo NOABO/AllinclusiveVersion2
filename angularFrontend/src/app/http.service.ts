@@ -9,6 +9,7 @@ import {
   providedIn: 'root',
 })
 export class HttpService {
+  
   constructor(private http: HttpClient) {}
 
   onsubmit(
@@ -66,7 +67,8 @@ export class HttpService {
     ElocURL: string,
     Eprice: string,
     EvidURL: string,
-    Esignature: string
+    Esignature: string,
+    companyId:string
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
       Etype,
@@ -77,8 +79,8 @@ export class HttpService {
       ElocURL,
       Eprice,
       EvidURL,
-
       Esignature,
+      companyId
     });
   }
   getEvents() {
@@ -87,4 +89,9 @@ export class HttpService {
   getEventsForCustomer() {
     return this.http.get('http://localhost:5000/api/event');
   }
+  getEventsByCompanyId(companyId:string){
+
+    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
+  }
+  
 }
