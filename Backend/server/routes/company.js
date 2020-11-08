@@ -80,6 +80,7 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
+
 router.get("/", async (req, res) => {
   await Company.find({}, (err, data) => {
     res.json(data);

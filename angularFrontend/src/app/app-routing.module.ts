@@ -6,9 +6,11 @@ import { CustomerComponent } from './customer/customer.component';
 import { EventCustomerComponent } from './event-customer/event-customer.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
-import {EventsMadeComponent} from './events-made/events-made.component';
+import { EventsMadeComponent } from './events-made/events-made.component';
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
 import { HomeComponent } from './component/home/home.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'company', component: CompanyComponent },
@@ -17,11 +19,10 @@ const routes: Routes = [
   { path: 'eventmakeraccount', component: EventmakeraccountComponent },
   { path: 'login-customer', component: LoginCustomerComponent },
   { path: 'login-company', component: LoginCompanyComponent },
-  {path:'about', component:AboutUsComponent},
+  { path: 'about', component: AboutUsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {path: 'events-made',component: EventsMadeComponent},
-  {path: 'home', component:HomeComponent}
-
+  { path: 'events-made', component: EventsMadeComponent },
+  { path: 'home', component: HomeComponent },
 
 ];
 
