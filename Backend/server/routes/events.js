@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const Event = require("../../db/database/Schema/Events.js");
 
-router.get("/", async (req, res) => {
+router.get("/eventsCustomer", async (req, res) => {
   try {
     await Event.find({}, (err, data) => {
       res.json(data);

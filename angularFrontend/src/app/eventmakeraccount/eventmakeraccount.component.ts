@@ -68,6 +68,8 @@ onSubmit1(pageName: string):void{
   .subscribe((r) => {
     console.log(r,'this is the body send');
   });
+
+     
         }
 
 }

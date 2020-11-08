@@ -10,6 +10,8 @@ import { LoginCompanyComponent } from './login-company/login-company.component';
 import {EventsMadeComponent} from './events-made/events-made.component';
 import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccount.component';
 import { HomeComponent } from './component/home/home.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'company', component: CompanyComponent },
