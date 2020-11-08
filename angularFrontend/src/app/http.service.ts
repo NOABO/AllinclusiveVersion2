@@ -1,12 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpParams,
+} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) {}
   
+  constructor(private http: HttpClient) {}
+
   onsubmit(
     type: string,
     name: string,
@@ -48,31 +53,45 @@ export class HttpService {
       imgUrl,
     });
   }
+
+  sendEmail(data) {
+    return this.http.post('http://localhost:5000/api/user/send', data);
+  }
+
   onRRRR(
-    Etype: string ,
-    Ename: string ,
-    Edescription: string ,
-    Edate: string ,
-    Eplace: string ,
-    ElocURL: string ,
-    Eprice: string ,
+    Etype: string,
+    Ename: string,
+    Edescription: string,
+    Edate: string,
+    Eplace: string,
+    ElocURL: string,
+    Eprice: string,
     EvidURL: string,
     Esignature: string,
+    companyId:string
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
-    Etype,
-    Ename,
-    Edescription,
-    Edate,
-    Eplace ,
-    ElocURL ,
-    Eprice ,
-    EvidURL,
-    Esignature
+      Etype,
+      Ename,
+      Edescription,
+      Edate,
+      Eplace,
+      ElocURL,
+      Eprice,
+      EvidURL,
+      Esignature,
+      companyId
     });
   }
-  getEvents(){
-   return this.http.get('http://localhost:5000/api/event')
+  getEvents() {
+    return this.http.get('http://localhost:5000/api/event');
+  }
+  getEventsForCustomer() {
+    return this.http.get('http://localhost:5000/api/event');
+  }
+  getEventsByCompanyId(companyId:string){
+
+    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
   }
   
 }

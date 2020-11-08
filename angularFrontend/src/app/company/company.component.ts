@@ -50,7 +50,6 @@ export class CompanyComponent implements OnInit {
           this.adress,
           this.imgUrlCompany
         )
-
         .subscribe((data) => {
           console.log(data);
         });

@@ -10,6 +10,8 @@ const eventSchema = new mongoose.Schema(
     Eprice: { type: String, required: true },
     EvidURL: { type: String, required: true },
     Esignature: { type: String, required: true },
+    companyId:{type: String, required: true }
+
   },
   {
     timestamps: true,
