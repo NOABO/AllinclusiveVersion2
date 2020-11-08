@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
-import { Observable } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -79,6 +77,8 @@ export class HttpService {
   getEvents(){
    return this.http.get('http://localhost:5000/api/event')
   }
-
-
+  getEventsForCustomer(){
+    return this.http.get('http://localhost:5000/api/event')
+  }
 }
+

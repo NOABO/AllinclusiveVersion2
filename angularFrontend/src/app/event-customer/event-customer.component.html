@@ -1,44 +1,41 @@
-  
-<!-- <div style="padding: 13px;">
-  <div *ngIf="products.length === 0"></div>
-
-  <mat-card *ngFor="let product of products" style="margin-top:10px;">
-    <mat-card-header>
-      <mat-card-title>{{product.name}}</mat-card-title>
-      <mat-card-subtitle>{{product.price}} $/ {{product.quantity}}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{product.description}}
-      </p>
-      <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button> Buy product</button>
-    </mat-card-actions>
-  </mat-card>
+<br/><br/><br/><p>Events</p>
+<!-- <button id="events" (click)="showEvents()">My events</button> -->
+<div class="events" *ngFor="let event of data ">
+  <div class="eventB">
+  <p>event type:{{event.Etype}}</p>
+  <p>event name :{{event.Ename}}</p>
+  <p>description:{{event.Edescription}}</p>
+  <p>event date:{{event.Edate}}</p>
+  <p>event Price:{{event.Eprice}}</p>
+<div class="location map"></div>
+  <p>event location</p>
+  <iframe
+    src="https://www.youtube.com/embed/94bOl-yJIZk"
+    width="400"
+    height="300"
+    frameborder="0"
+    style="border: 0"
+    allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0"
+  >
+  </iframe>  
+<div>
+  <iframe
+  src="https://www.youtube.com/embed/xcSK4-Hrjic"
+  width="400"
+  height="300"
+  frameborder="0"
+  style="border: 0"
+  allowfullscreen=""
+  aria-hidden="false"
+  tabindex="0"
+>
+</iframe>  
+</div>
+<!-- <div class="video">
+  <iframe width="640" height="480" controls src="{{event.EvidURL}}"> </iframe>
 </div> -->
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
 
-  <div *ngFor="let item of products; let i = index" id="events-container">
-    <p >
-      {{item.Etype}}
-      {{item.Ename}}
-      {{item.Edescription}}
-      {{item.Edate}}
-      {{item.Eplace}}
-      {{item.Eprice}}
-      {{item.Esignature}}
-    </p>
-    <!-- <iframe src=" {{item.ElocURL}}" width="400" height="300" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
-      tabindex="0">
-    </iframe>
-     -->
-     
-    <iframe width="400" height="300" controls src="https://www.youtube.com/embed/FS0XoKiKVwU" > </iframe>
-  </div>
-
+</div><br/> 
+</div>

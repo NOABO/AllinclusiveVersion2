@@ -24,7 +24,7 @@ data;
   }
 
   ngOnInit(): void {
-    this._http.getEvents().subscribe((data:any[])=>{
+    this._http.getEvents().subscribe((data:[])=>{
       this.data = data
       console.log(this.data,'getting the events posted')
     })
