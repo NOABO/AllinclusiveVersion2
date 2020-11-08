@@ -1,7 +1,7 @@
 
 import { Component} from '@angular/core';
 import { Router } from '@angular/router';
-import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
+// import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 import {CustomerComponent} from './customer/customer.component'
 import {CompanyComponent} from './company/company.component';
 import * as firebase from 'firebase';

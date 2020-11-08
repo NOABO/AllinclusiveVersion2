@@ -1,5 +1,8 @@
 <p>login-company works!</p>
 <div>
+  <p>email</p>
+  <i id="icon" class="material-icons prefix"> email</i>
+
   <input
     type="text"
     id="passwordCompany"
@@ -9,6 +12,8 @@
     [(ngModel)]="emailCompany"
     required
   />
+  <p>password</p>
+  <i id="icon" class="material-icons prefix">vpn_key</i>
   <br />
 
   <!-- Password -->
@@ -21,10 +26,21 @@
     [(ngModel)]="passwordCompany"
     required
   />
-
-  <button class="btn btn-info btn-block my-4" (click)="save()" type="submit">
-    Sign in
+  <br />
+  <br />
+  <button
+    class="btn"
+    type="submit"
+    (click)="handleCompanyButton('eventmakeraccount')"
+  >
+    Login
   </button>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
   <button
     class="btn"
