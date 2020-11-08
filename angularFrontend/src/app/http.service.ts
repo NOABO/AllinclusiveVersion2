@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) {}
-  
+  constructor(private http: HttpClient) { }
+
   onsubmit(
     type: string,
     name: string,
@@ -25,7 +25,7 @@ export class HttpService {
       adress,
       imgUrlCompany,
     });
-  }
+  };
 
   onclick(
     type: string,
@@ -48,6 +48,7 @@ export class HttpService {
       imgUrl,
     });
   }
+
   onRRRR(
     Etype: string ,
     Ename: string ,
@@ -58,6 +59,7 @@ export class HttpService {
     Eprice: string ,
     EvidURL: string,
     Esignature: string,
+
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
     Etype,
@@ -68,6 +70,7 @@ export class HttpService {
     ElocURL ,
     Eprice ,
     EvidURL,
+
     Esignature
     });
   }
