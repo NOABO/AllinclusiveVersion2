@@ -1,85 +1,26 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-#main-page-div {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.btn {
-  position: relative;
-  left: 120px;
-  top: 120px;
-  padding: 10px;
-  width: auto;
-  height: 90px;
-  cursor: auto;
-  background-color: rgb(243, 214, 141);
-  border-radius: 150px;
-  transition: all 0.5s;
-  cursor: pointer;
-  transition: all 0.5s;
-  border-color: rgb(218, 130, 72);
-  outline: none;
-}
-.btn:hover {
-  padding-right: 25px;
-}
 
-.btn:hover {
-  opacity: 1;
-  right: 0;
-}
-i {
-  font-weight: bold;
-}
-
-h1 {
-  position: relative;
-  left: 220px;
-  color: orange;
-  font-size: 70px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-h3 {
-  position: relative;
-  left: 120px;
-  top: 600px;
-  font-size: 30px;
-  color: rgb(206, 69, 6);
-  font-style: italic;
-}
-#components {
-  position: relative;
-  left: 400px;
-  top: 100px;
-  height: 100px;
-  width: 400px;
-}
-
-#mat-carousel {
-  position: relative;
-  top: 80px;
-}
 /*navbar*/
+body{
+  background-image: url("https://www.iwantwallpaper.co.uk/images/sirpi-floral-leaf-pattern-wallpaper-metallic-glitter-heavy-weight-20590-p3723-9033_image.jpg");
 
+}
 header img {
   height: 80px;
-  margin-left: 40px;
+  margin-left: 300px;
 }
 
 header {
-  background-color: rgb(243, 214, 141);
+
+  background-color:rgb(255, 228, 196);
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
-  transition: top 0.3s;
+  height: 85px;
   display: flex;
   align-items: center;
   box-shadow: 0 0 25px 0 black;
+  z-index: 10;
 }
 
 header * {
@@ -87,12 +28,15 @@ header * {
 }
 
 header li {
-  margin: 20px;
+  margin: 50px;
 }
 
 header li a {
-  color: black;
+  color: brown;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 21px;
+  font-family: cursive;
 }
 
 .nav{
