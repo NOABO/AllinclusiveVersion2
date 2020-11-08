@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./company.component.css'],
 })
 export class CompanyComponent implements OnInit {
-  type: string = '';
+  
   name: string = '';
   emailCompany: string = '';
   passwordCompany: string = '';
@@ -26,7 +26,7 @@ export class CompanyComponent implements OnInit {
     this.router.navigate([`${pageName}`]);
 
     if (
-      this.type === '' ||
+    
       this.name === '' ||
       this.emailCompany === '' ||
       this.phoneNumberCompany === '' ||
@@ -42,7 +42,6 @@ export class CompanyComponent implements OnInit {
     } else {
       this._http
         .onsubmit(
-          this.type,
           this.name,
           this.emailCompany,
           this.phoneNumberCompany,

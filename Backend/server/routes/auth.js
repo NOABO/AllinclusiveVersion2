@@ -63,26 +63,25 @@ const loginschema = Joi.object({
 
 router.post("/login", async (req, res, next) => {
   //check if user already exist
-  console.log( "this is the request of login==>",req.body,res)
-  // try {
-  //   const { error } = await loginschema.validateAsync(req.body);
-  //   const user = await User.findOne({ email: req.body.email });
-  //   if (!user) return res.status(400).send("Email or password is wrong");
+  try {
+    const { error } = await loginschema.validateAsync(req.body);
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) return res.status(400).send("Email or password is wrong");
 
-  //   //check password
-  //   const validPass = await bcrypt.compare(req.body.password, user.password);
-  //   if (!validPass) return res.status(400).send("password not valid");
+    //check password
+    const validPass = await bcrypt.compare(req.body.password, user.password);
+    if (!validPass) return res.status(400).send("password not valid");
 
-  //   //create and assign a token
-  //   const token = jwt.sign({ _id: user._id }, config.get("jwt").secret);
-  //   res.header("auth-token", token).json(user);
-  // } catch (error) {
-  //   if (error.isJoi === true) res.status(400).send(error.details[0].message);
-  //   next(error);
-  // }
+    //create and assign a token
+    const token = jwt.sign({ _id: user._id }, config.get("jwt").secret);
+    res.header("auth-token", token).json(user);
+  } catch (error) {
+    if (error.isJoi === true) res.status(400).send(error.details[0].message);
+    next(error);
+  }
 });
 
-router.get("/login", async (req, res) => {
+router.get("/", async (req, res) => {
   await User.find({}, (err, data) => {
     res.json(data);
   });
