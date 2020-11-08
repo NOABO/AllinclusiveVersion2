@@ -1,37 +1,51 @@
+<br /><br /><br /><br />
+<div class="login">
+  <br/> 
+  <br/>
+  <br/>
+  <br/>
 
-<p>login as company:</p>
-<div>
-  <p>email</p>
-  <i id="icon" class="material-icons prefix"> email</i>
-
-  <div class="t">
-    <div class="login">
-      <br>
-      <br>
-      <br>
-      <br>
-      <p class="e">Email</p>
-      <input type="text" id="passwordCompany" placeholder="E-mail" required="" [(ngModel)]="emailCompany" required />
-      <br>
-      <br>
-      <br>
-      <br>
-      <p class="p">Password</p>
-      <br />
-      <input type="text" id="passwordCompany" placeholder="Password" required="" [(ngModel)]="passwordCompany"
-        required />
-      <br />
-      <br />
-      <br />
-      <br />
-      <button class="btn" type="submit" (click)="handleCompanyButton('eventmakeraccount')">
-        Login
-      </button>
-      <br />
-      <br />
-      <br />
-      <br />
-      <button id="m" class="btn" type="submit" (click)="handleCreateAccountButton('company')">
-        Create new account </button>
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit(loginForm.value, 'eventmakeraccount')"
+  >
+    <div class="mb-3">
+      <label for="email" class="l"> Email </label>
+      <input
+        id="emailCompany"
+        type="email"
+        name="emailCompany"
+        class="form-control"
+        formControlName="emailCompany"
+      />
     </div>
-  </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="mb-3">
+      <label for="password" class="s"> Password </label>
+      <input
+        id="passwordCompnay"
+        type="password"
+        name="passwordCompnay"
+        class="form-control"
+        formControlName="passwordCompany"
+      />
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <button id="m" class="btn" type="submit">Login</button>
+    <button
+      id="m"
+      class="btn"
+      type="submit"
+      (click)="handleCreateAccountButton('company')"
+    >
+      Create new account
+    </button>
+  </form>
+
+</div>

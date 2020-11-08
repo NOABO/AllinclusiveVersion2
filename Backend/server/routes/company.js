@@ -8,7 +8,7 @@ const config = require("config");
 //Validation for company registration
 
 const schema = Joi.object({
-  type: Joi.string().min(6).required(),
+ 
   name: Joi.string().min(6).required(),
   emailCompany: Joi.string().min(6).required().email(),
   passwordCompany: Joi.string().min(6).required(),
@@ -29,7 +29,7 @@ router.post("/add", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(req.body.passwordCompany, salt);
 
     const newCompany = new Company({
-      type: req.body.type,
+      
       name: req.body.name,
       emailCompany: req.body.emailCompany,
       passwordCompany: hashedPassword,
@@ -80,14 +80,13 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-// router.get("/company/login", async (req, res) => {
-//   await Company.findOne({
-//     emailCompany : req.body.email,
-//   }, (err, data) => {
-//     if(err) throw err;
-//     res.json(data);
-//   });
-// });
+
+router.get("/", async (req, res) => {
+  await Company.find({}, (err, data) => {
+    res.json(data);
+  });
+});
+
 
 router.delete("/", async (req, res) => {
   await Company.deleteMany(req.params.id, req.body);

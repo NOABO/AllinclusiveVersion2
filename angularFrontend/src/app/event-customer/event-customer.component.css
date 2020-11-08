@@ -20,3 +20,23 @@
     font-weight: bold;
     margin-top: 200px;
 }
+
+table, th, td {
+  border: 1px solid black;
+  width: 100%;
+  border-collapse: collapse;
+  height: auto;
+  border-spacing: 1px;
+}
+
+  td {
+  height: 50px;
+  text-align: center;
+}
+
+th {
+  background-color: #8B4513;
+  color: black;
+}
+
+
