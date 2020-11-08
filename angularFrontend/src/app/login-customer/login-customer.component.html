@@ -1,41 +1,40 @@
-<div class="login">
+<br /><br /><br /><br />
 
-<br/>
-<br/>
 <div>
-  <br/>
-<br/>
-<p class="e">Email</p>
-<i id="icon" class="material-icons prefix" > email</i>
-<input
-  type="text"
-  id="type"
-  class="form-control"
-  placeholder="enter your email"
-/>
-<br/>
-<br/>
-<br/>
-<br/>
-<p class="p">Password</p>
-<i id="icon" class="material-icons prefix">vpn_key</i>
-<input
-  type="password"
-  id="name"
-  class="form-control"
-  placeholder="enter your password"
-/>
-<br />
-<br />
-<br />
-<br />
+  <form
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit(loginForm.value, 'customer')"
+  >
+    <div class="mb-3">
+      <label for="email" class="form-label"> Email </label>
+      <input
+        id="email"
+        type="email"
+        name="email"
+        class="form-control"
+        formControlName="email"
+      />
+    </div>
 
+    <div class="mb-3">
+      <label for="password" class="form-label"> Password </label>
+      <input
+        id="password"
+        type="password"
+        name="password"
+        class="form-control"
+        formControlName="password"
+      />
+    </div>
 
-<button class="btn" type="submit" (click)="handleCustomerButton('event-customer')">Login</button>
-
-<br />
-<br />
-<br />
-<br />
-<button id="h" class="btn" type="submit" (click)="handleCreateAccountButton('customer')">Register</button>
- </div>
+    <button id="m" class="btn" type="submit">Login</button>
+    <button
+      id="h"
+      class="btn"
+      type="submit"
+      (click)="handleCreateAccountButton('customer')"
+    >
+      Register
+    </button>
+  </form>
+</div>
