@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
 import { Observable } from 'rxjs';
-
+import { retry, catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
@@ -108,4 +109,20 @@ export class HttpService {
       password
     })
   }
+  handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Unknown error!';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side errors
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side errors
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
+  }
+  sendGetRequest(){
+    return this.http.get('http://localhost:5000/api/event/eventsCustomer').pipe(retry(3), catchError(this.handleError));
+  }
+
 }
