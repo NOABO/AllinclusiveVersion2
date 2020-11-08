@@ -61,3 +61,7 @@ input{
     color: rgb(95, 7, 7);
     letter-spacing: 5px;
   }
+
+  #icon{
+    margin-left: -190px;
+  }
