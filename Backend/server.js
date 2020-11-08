@@ -29,7 +29,6 @@ Connection.once('open', function () {
 
 //Routes middlewares
 app.use('/api/user', require('././server/routes/auth.js'));
-
 app.use('/api/event', require('././server/routes/events.js'));
 app.use('/api/company', require('././server/routes/company.js'));
 app.use('/api/seller', require('././server/routes/company.js'));
