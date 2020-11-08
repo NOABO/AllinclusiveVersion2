@@ -22,4 +22,11 @@
     padding: 3em !important;
   }
 }
+.container{
+  text-align: center;
+}
 
+img{
+  margin-top: 130px;
+  display: inline-block;
+}
