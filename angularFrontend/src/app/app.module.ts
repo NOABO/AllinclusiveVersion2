@@ -24,12 +24,9 @@ import { HomeComponent } from './component/home/home.component';
     AppComponent,
     CompanyComponent,
     CustomerComponent,
- 
     EventCustomerComponent,
     EventmakeraccountComponent,
     EMeventsComponent,
-   
-   
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
@@ -49,4 +46,4 @@ import { HomeComponent } from './component/home/home.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
