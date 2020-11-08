@@ -1,9 +1,53 @@
-.btn {
-  background-color: orange;
-  width: 100px;
-  height: 40px;
+.sign{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 900px;
+  background-color: rgba(56, 33, 4, 0.514);
+    width: 800px;
+    align-items: center;
+    text-align: center;
 }
+
 input{
-        width: 200px;
-        height: 30px;
+  background-color: transparent;
+    border-color: rgba(49, 7, 7, 0.753);
+    outline: none;
+    height: 30px;
+    font-size: 25px;
+    color: white;
+    font-family: cursive;
+    width: 300px;
+    display: inline-block;
+}
+
+::placeholder{
+  color: rgba(240, 248, 255, 0.425);
+  text-align: center;
+}
+
+  
+  
+.btn{
+background-color: rgba(206, 143, 143, 0.377);
+  border-color: rgba(49, 7, 7, 0.753);
+  outline: none;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  font-family: cursive;
+   border-radius:15px 50px 30px;
+   width: 180px;
+   font-weight: bold;
+  
+}
+.btn:hover{
+background-color: rgb(189, 48, 33);
+}
+.title{
+  font-family: cursive;
+  font-weight: bold;
+  color: rgb(107, 17, 17);
+  font-size: 30px;
 }

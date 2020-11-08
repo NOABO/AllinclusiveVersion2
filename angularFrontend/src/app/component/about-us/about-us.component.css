@@ -1,0 +1,32 @@
+#main-header img {
+  width: 10%;
+  height: 10%;
+}
+
+#main-header .port-item {
+  width: 20%;
+}
+
+#main-header .port-item:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.bg-black {
+  color: #fff;
+  background: #000;
+}
+
+@media (min-width: 1199px) {
+  .port-item {
+    padding: 3em !important;
+  }
+}
+.container{
+  text-align: center;
+}
+
+img{
+  margin-top: 130px;
+  display: inline-block;
+}
