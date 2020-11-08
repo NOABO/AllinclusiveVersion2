@@ -61,6 +61,7 @@ export class HttpService {
     Eprice: string ,
     EvidURL: string,
     Esignature: string,
+
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
     Etype,
@@ -71,6 +72,7 @@ export class HttpService {
     ElocURL ,
     Eprice ,
     EvidURL,
+
     Esignature
     });
   }

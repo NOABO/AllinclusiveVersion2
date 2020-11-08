@@ -35,6 +35,7 @@ export class EventCustomerComponent implements OnInit {
                 
 //                   />`
                 
+
 //       document.querySelector('.imgHolder').appendChild(imgH); 
 //   }
  
@@ -46,4 +47,5 @@ export class EventCustomerComponent implements OnInit {
 //     this.numberOfLikes--;
 //     console.log(this.numberOfLikes)
 //   }
+ 
 }
