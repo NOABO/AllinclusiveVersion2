@@ -1,7 +1,7 @@
 <p>Events posted by you</p>
-<button id="events" (click)="showEvents()">My events</button>
+<!-- <button id="events" (click)="showEvents()">My events</button> -->
 <div class="events" *ngFor="let event of data ">
-  <div>
+  <div class="eventB">
   <p>event type:{{event.Etype}}</p>
   <p>event name :{{event.Ename}}</p>
   <p>description:{{event.Edescription}}</p>
@@ -20,8 +20,9 @@
     tabindex="0"
   >
   </iframe>
-</div>
+
 <div class="video">
   <iframe width="640" height="480" controls src="{{event.EvidURL}}"> </iframe>
 </div>
+</div><br>
 </div>
