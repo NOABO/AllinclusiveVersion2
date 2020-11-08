@@ -83,6 +83,7 @@ router.post("/login", async (req, res, next) => {
 
 router.get("/", async (req, res) => {
   await User.find({}, (err, data) => {
+    console.log("this is the get login data ",data)
     res.json(data);
   });
 });

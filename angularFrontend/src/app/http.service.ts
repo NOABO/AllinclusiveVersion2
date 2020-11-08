@@ -89,9 +89,15 @@ export class HttpService {
   getEventsForCustomer() {
     return this.http.get('http://localhost:5000/api/event');
   }
-  getEventsByCompanyId(companyId:string){
 
-    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
+
+  handleCustomerButton(){
+    return this.http.get('http://localhost:5000/api/user/')
   }
+
+  getEventsByCompanyId(companyId:string){
+    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
+   }
+   
   
 }

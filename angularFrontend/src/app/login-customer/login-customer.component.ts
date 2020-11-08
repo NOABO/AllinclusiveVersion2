@@ -10,6 +10,7 @@ import { CustomerService } from 'src/app/services/customer.services';
   styleUrls: ['./login-customer.component.css'],
 })
 export class LoginCustomerComponent implements OnInit {
+
   loginForm;
 
   constructor(
