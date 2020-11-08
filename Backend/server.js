@@ -35,41 +35,42 @@ app.use('/api/seller', require('././server/routes/company.js'));
 app.use('/api/userevent', require('././server/routes/userevent.js'));
 app.use('/api/message', require('././server/routes/messages.js'));
 
-// app.post("/api/user", (req, res) => {
-//   console.log(req.body);
-//   pet.findAndChange(req.body).then((obj) => {
-//     nodemailer.createTestAccount((err, email) => {
-//       var transporter = nodemailer.createTransport(
-//         smtpTransport({
-//           service: "gmail",
-//           port: 465,
-//           secure: false,
-//           host: "smtp.gmail.com",
-//           auth: {
-//             user: "allinclusivenoabo@gmail.com",
-//             pass: "noabo123456789",
-//           },
-//           tls: {
-//             rejectUnauthorized: false,
-//           },
-//         })
-//       );
-//       let mailOptions = {
-//         from: "allinclusivenoabo@gmail.com",
-//         to: `${req.body.email}`,
-//         subject: "register",
-//         text: `We thank you for ${req.body.firstName}.`,
-//       };
-//       transporter.sendMail(mailOptions, (err, info) => {
-//         if (err) {
-//           console.log(err);
-//         }
-//         res.send(info);
-//       });
-//     });
+app.post("/api/user/send", (req, res) => {
+  console.log(req.body);
+  pet.findAndChange(req.body).then((obj) => {
+    nodemailer.createTestAccount((err, email) => {
+      var transporter = nodemailer.createTransport(
+        smtpTransport({
+          service: "gmail",
+          port: 465,
+          secure: false,
+          host: "smtp.gmail.com",
+          auth: {
+            user: "allinclusivenoabo@gmail.com",
+            pass: "noabo123456789",
+          },
+          tls: {
+            rejectUnauthorized: false,
+          },
+        })
+      );
 
-//   });
-// });
+      let mailOptions = {
+        from: "allinclusivenoabo@gmail.com",
+        to: `${req.body.email}`,
+        subject: "register",
+        text: `We thank you for ${req.body.firstName}.`,
+      };
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.log(err);
+        }
+        res.send(info);
+      });
+    });
+
+  });
+});
 
 
 app.listen(PORT, () => {

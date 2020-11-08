@@ -9,7 +9,6 @@ import { CompanyService } from 'src/app/services/company.services';
 })
 export class LoginCompanyComponent implements OnInit {
   emailCompany: String = '';
-  companyName: String = '';
   passwordCompany: String = '';
   constructor(private router: Router, private CompanyService: CompanyService) {}
 

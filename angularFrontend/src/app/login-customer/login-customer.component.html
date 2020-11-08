@@ -1,14 +1,23 @@
-<p>login as customer :</p>
+<div class="login">
+
+<br/>
+<br/>
 <div>
-<p>email</p>
-<i id="icon" class="material-icons prefix" >email</i>
+<br/>
+<br/>
+<p class="e">Email</p>
+<i id="icon" class="material-icons prefix" > email</i>
 <input
   type="text"
   id="type"
   class="form-control"
   placeholder="enter your email"
 />
-<p>password</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<p class="p">Password</p>
 <i id="icon" class="material-icons prefix">vpn_key</i>
 <input
   type="password"
@@ -18,7 +27,15 @@
 />
 <br />
 <br />
+<br />
+<br />
+
+
 <button class="btn" type="submit" (click)="handleCustomerButton('event-customer')">Login</button>
+
 <br />
 <br />
-<button class="btn" type="submit" (click)="handleCreateAccountButton('customer')">Create new account</button>
+<br />
+<br />
+<button id="h" class="btn" type="submit" (click)="handleCreateAccountButton('customer')">Register</button>
+ </div>
