@@ -9,6 +9,8 @@ const eventSchema = new mongoose.Schema(
     ElocURL: { type: String, required: true },
     Eprice: { type: String, required: true },
     EvidURL: { type: String, required: true },
+    Esignature: { type: String, required: true },
+
   },
   {
     timestamps: true,

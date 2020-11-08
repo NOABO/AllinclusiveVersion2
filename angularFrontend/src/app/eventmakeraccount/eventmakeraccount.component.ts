@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { HttpService } from '../http.service';
+
 @Component({
   selector: 'app-eventmakeraccount',
   templateUrl: './eventmakeraccount.component.html',
@@ -14,10 +15,11 @@ export class EventmakeraccountComponent implements OnInit {
   Eplace: string = '';
   ElocURL: string = '';
   Eprice: string = '';
-  EvidURL:  String='' ;
-  constructor(private _http: HttpService,private router: Router) {}
 
-  ngOnInit(): void {}
+  EvidURL:  string='' ;
+  Esignature:string='';
+  constructor(private _http: HttpService,private router: Router) {}
+  ngOnInit(): void { }
   title = 'video';
   currentVal = '';
 
@@ -33,13 +35,13 @@ export class EventmakeraccountComponent implements OnInit {
               </iframe>
                 `;
   }
-markerTitle ='marker' ;
-currentMarker = '';
+  markerTitle = 'marker';
+  currentMarker = '';
 
-addMarker(val){
-this.currentMarker = val;
-let Gmap =document.querySelector('.Gmap');
-Gmap.innerHTML=`           <iframe src= "${this.currentMarker}"
+  addMarker(val) {
+    this.currentMarker = val;
+    let Gmap = document.querySelector('.Gmap');
+    Gmap.innerHTML = `           <iframe src= "${this.currentMarker}"
                     width="400"
                     height="300"
                     frameborder="0"
@@ -49,10 +51,12 @@ Gmap.innerHTML=`           <iframe src= "${this.currentMarker}"
                     tabindex="0"> 
             </iframe> `
 }
+//saving to database
+onSubmit1(pageName: string):void{
+  this.router.navigate([`${pageName}`]);
 
-onSubmit1() {
-    this._http
-  .onRRRR(
+  this._http
+.onRRRR(
     this.Etype,
     this.Ename,
     this.Edescription,
@@ -60,14 +64,12 @@ onSubmit1() {
     this.Eplace,
     this.ElocURL,
     this.Eprice,
-    this.EvidURL
-    
+    this.EvidURL,
+    this.Esignature
   )
-  .subscribe((data) => {
-    console.log(data);
-  });
-     
+  .subscribe((r) => {
+    console.log(r,'this is the body send');
+  }); 
         }
-
 }
 
