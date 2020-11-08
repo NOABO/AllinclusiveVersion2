@@ -81,4 +81,8 @@ export class HttpService {
   }
 
 
+  handleCustomerButton(){
+    return this.http.get('http://localhost:5000/api/user/')
+  }
+
 }

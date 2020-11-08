@@ -9,16 +9,27 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class EventCustomerComponent implements OnInit {
   numberOfLikes : number=0;
   products = [];
-  // urls =[];
-  constructor(private _http: HttpService, private _sanitizationService: DomSanitizer) { }
+  safeurlvideo=[];
+  safeUrl =[];
+  videos = {};
+  maps ={};
+  constructor(private _http: HttpService, private _sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this._http.sendGetRequest().subscribe((data: any[]) => {
-      console.log(data[0].EvidURL);
+      // console.log(data[0].EvidURL);
       this.products = data;
+      for(let i = 0 ; i < this.products.length ; i++){
+        this.videos=this._sanitizer.bypassSecurityTrustResourceUrl(`${this.products[i].EvidURL}`);
+        this.maps = this._sanitizer.bypassSecurityTrustResourceUrl(`${this.products[i].ElocURL}`);
+        this.safeUrl.push(this.videos);
+        this.safeurlvideo.push(this.maps)
+        
+      }
       
-
     })  
+    console.log("this is the safe url array===>",this.safeUrl)
+    console.log("this is the videos object===>", this.videos)
   }
   // title = "image";
 //   currentVal = "";
