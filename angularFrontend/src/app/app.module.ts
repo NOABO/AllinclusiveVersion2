@@ -18,23 +18,23 @@ import { LoginCompanyComponent } from './login-company/login-company.component';
 import { CommonModule } from '@angular/common';
 import { EventsMadeComponent } from './events-made/events-made.component';
 import { HomeComponent } from './component/home/home.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CompanyComponent,
     CustomerComponent,
- 
     EventCustomerComponent,
     EventmakeraccountComponent,
     EMeventsComponent,
-
 
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
     AboutUsComponent,
     HomeComponent,
+    ReservationComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,4 +49,4 @@ import { HomeComponent } from './component/home/home.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

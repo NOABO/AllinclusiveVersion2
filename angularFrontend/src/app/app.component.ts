@@ -8,6 +8,7 @@ import {CompanyComponent} from './company/company.component';
 import { LoginCustomerComponent } from './login-customer/login-customer.component';
 import { LoginCompanyComponent } from './login-company/login-company.component';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

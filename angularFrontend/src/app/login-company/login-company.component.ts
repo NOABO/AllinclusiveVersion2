@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { CompanyService } from 'src/app/services/company.services';
+
 
 @Component({
   selector: 'app-login-company',
@@ -8,6 +10,7 @@ import { CompanyService } from 'src/app/services/company.services';
   styleUrls: ['./login-company.component.css'],
 })
 export class LoginCompanyComponent implements OnInit {
+
   emailCompany: String = '';
   passwordCompany: String = '';
   constructor(private router: Router, private CompanyService: CompanyService) {}
@@ -24,7 +27,8 @@ export class LoginCompanyComponent implements OnInit {
   // redirection to the company component
   handleCompanyButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
-  }
+  };
+  
   // redirection to the login-company component
   handleCreateAccountButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);

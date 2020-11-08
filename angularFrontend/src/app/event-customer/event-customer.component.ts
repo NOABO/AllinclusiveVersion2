@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
+import { DomSanitizer,SafeUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-event-customer',
@@ -7,34 +10,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventCustomerComponent implements OnInit {
   numberOfLikes : number=0;
-  constructor() { }
+  data;
+  constructor(private _http: HttpService, private router: Router) { }
 
-  ngOnInit(): void {
-  }
-  title = "image";
+  // ngOnInit(): void {
+  // }
+  // title = "image";
   currentVal = "";
-  
-
-addImg(val) {
-
-this.currentVal=val
-    let imgH= document.createElement('div');
-    imgH.className = 'imgH'; 
-    imgH.innerHTML =  `
-      <img
-                  src= ${this.currentVal}
-                
-                  />`
-                
-      document.querySelector('.imgHolder').appendChild(imgH); 
+  ngOnInit(): void {
+    this._http.getEvents().subscribe((data:[])=>{
+      this.data = data
+      console.log(this.data,'getting the events posted')
+    })
   }
+
+  handleReservationButton(pageName: string): void {
+    this.router.navigate([`${pageName}`]);
+  }
+
+// addImg(val) {
+
+// this.currentVal=val
+//     let imgH= document.createElement('div');
+//     imgH.className = 'imgH'; 
+//     imgH.innerHTML =  
+//       <img
+//                   src= ${this.currentVal}
+                
+//                   />
+
+//       document.querySelector('.imgHolder').appendChild(imgH); 
+//   }
  
-  likeButtonClick() {
-    this.numberOfLikes++;
-    console.log(this.numberOfLikes)
-  }
-  dislikeButtonClick() {
-    this.numberOfLikes--;
-    console.log(this.numberOfLikes)
-  }
-}
+//   likeButtonClick() {
+//     this.numberOfLikes++;
+//     console.log(this.numberOfLikes)
+//   }
+//   dislikeButtonClick() {
+//     this.numberOfLikes--;
+//     console.log(this.numberOfLikes)
+//   }
+ }
