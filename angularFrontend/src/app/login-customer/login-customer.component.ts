@@ -23,6 +23,7 @@ export class LoginCustomerComponent implements OnInit {
       password: '',
     });
   }
+
   handleCreateAccountButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
   }

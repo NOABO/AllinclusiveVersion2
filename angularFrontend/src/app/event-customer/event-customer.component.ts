@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { DomSanitizer,SafeUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
+
+
 @Component({
   selector: 'app-event-customer',
   templateUrl: './event-customer.component.html',
@@ -8,19 +11,27 @@ import { DomSanitizer,SafeUrl } from '@angular/platform-browser';
 })
 export class EventCustomerComponent implements OnInit {
   numberOfLikes : number=0;
+  data;
   products = [];
   safeurlvideo=[];
   safeUrl =[];
   videos = {};
   maps ={};
-  constructor(private _http: HttpService, private _sanitizer: DomSanitizer) { }
+  constructor(private _http: HttpService, private _sanitizer: DomSanitizer,private router: Router) { }
 
 
-  // ngOnInit(): void {
-  // }
-  // title = "image";
+
   currentVal = "";
   ngOnInit(): void {
+    this._http.getEvents().subscribe((data:[])=>{
+      this.data = data
+      console.log(this.data,'getting the events posted')
+    })
+  }
+
+  handleReservationButton(pageName: string): void {
+    this.router.navigate([`${pageName}`]);
+  }
 
     this._http.sendGetRequest().subscribe((data: any[]) => {
       // console.log(data[0].EvidURL);
@@ -49,12 +60,11 @@ export class EventCustomerComponent implements OnInit {
 // this.currentVal=val
 //     let imgH= document.createElement('div');
 //     imgH.className = 'imgH'; 
-//     imgH.innerHTML =  `
+//     imgH.innerHTML =  
 //       <img
 //                   src= ${this.currentVal}
                 
-//                   />`
-                
+
 //       document.querySelector('.imgHolder').appendChild(imgH); 
 //   }
  
@@ -67,3 +77,4 @@ export class EventCustomerComponent implements OnInit {
 //     console.log(this.numberOfLikes)
 //   }
  }
+
