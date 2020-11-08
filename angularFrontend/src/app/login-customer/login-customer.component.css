@@ -3,7 +3,7 @@
   top: 60%;
   left: 50%;
   transform: translate(-50%,-50%);
-  height: 510px;
+  height: 520px;
   background-color: rgba(56, 33, 4, 0.514);
     width: 800px;
     align-items: center;
@@ -38,29 +38,33 @@ input{
   text-align: center;
 }
 
-.h{
-  width: 210px;
-  height: 210px;
+.s{
+  margin-left: -12%;
+  font-family: cursive;
+  font-weight: lighter;
+  color: rgb(95, 7, 7);
+  letter-spacing: 5px;
+  font-size: 22px;
+}
+
+
+.l{
+  margin-left: -5%;
+  font-size: 22px;
+  font-family: cursive;
+  font-weight: lighter;
+  color: rgb(95, 7, 7);
+  letter-spacing: 5px;
 }
 
 .btn:hover{
   background-color: rgb(189, 48, 33);
   }
-  
-.e{
-  margin-left: -33%;
-  font-family: cursive;
-  font-weight: lighter;
-  color: rgb(95, 7, 7);
-  letter-spacing: 5px;
-  font-size: 22px;
-}
 
-.p{
-  margin-left: -25%;
-  font-size: 22px;
-  font-family: cursive;
-  font-weight: lighter;
-  color: rgb(95, 7, 7);
-  letter-spacing: 5px;
-}
+  #h{
+    margin-left: 50px;
+  }
+  #m{
+    margin-left: 50px;
+    width:220px ;
+  }

@@ -1,11 +1,16 @@
 <br /><br /><br /><br />
-<div>
+<div class="login">
+  <br/> 
+  <br/>
+  <br/>
+  <br/>
+
   <form
     [formGroup]="loginForm"
     (ngSubmit)="onSubmit(loginForm.value, 'eventmakeraccount')"
   >
     <div class="mb-3">
-      <label for="email" class="form-label"> Email </label>
+      <label for="email" class="l"> Email </label>
       <input
         id="emailCompany"
         type="email"
@@ -14,9 +19,13 @@
         formControlName="emailCompany"
       />
     </div>
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
     <div class="mb-3">
-      <label for="password" class="form-label"> Password </label>
+      <label for="password" class="s"> Password </label>
       <input
         id="passwordCompnay"
         type="password"
@@ -25,7 +34,9 @@
         formControlName="passwordCompany"
       />
     </div>
-
+    <br/>
+    <br/>
+    <br/>
     <button id="m" class="btn" type="submit">Login</button>
     <button
       id="m"
@@ -37,5 +48,4 @@
     </button>
   </form>
 
-</div>
 </div>
