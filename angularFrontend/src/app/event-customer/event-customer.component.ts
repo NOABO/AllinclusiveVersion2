@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
-import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { DomSanitizer,SafeUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-event-customer',
   templateUrl: './event-customer.component.html',
@@ -15,7 +15,13 @@ export class EventCustomerComponent implements OnInit {
   maps ={};
   constructor(private _http: HttpService, private _sanitizer: DomSanitizer) { }
 
+
+  // ngOnInit(): void {
+  // }
+  // title = "image";
+  currentVal = "";
   ngOnInit(): void {
+
     this._http.sendGetRequest().subscribe((data: any[]) => {
       // console.log(data[0].EvidURL);
       this.products = data;
@@ -30,10 +36,13 @@ export class EventCustomerComponent implements OnInit {
     })  
     console.log("this is the safe url array===>",this.safeUrl)
     console.log("this is the videos object===>", this.videos)
-  }
-  // title = "image";
-//   currentVal = "";
-  
+     }
+//     this._http.getEvents().subscribe((data:[])=>{
+//       this.data = data
+//       console.log(this.data,'getting the events posted')
+//     })
+
+
 
 // addImg(val) {
 
@@ -46,7 +55,6 @@ export class EventCustomerComponent implements OnInit {
                 
 //                   />`
                 
-
 //       document.querySelector('.imgHolder').appendChild(imgH); 
 //   }
  
@@ -58,5 +66,4 @@ export class EventCustomerComponent implements OnInit {
 //     this.numberOfLikes--;
 //     console.log(this.numberOfLikes)
 //   }
- 
-}
+ }

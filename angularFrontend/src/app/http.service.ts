@@ -1,16 +1,19 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
-import { Observable } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpParams,
+} from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) { }
+  
+  constructor(private http: HttpClient) {}
 
   onsubmit(
-    type: string,
+    
     name: string,
     emailCompany: string,
     phoneNumberCompany: string,
@@ -19,7 +22,7 @@ export class HttpService {
     imgUrlCompany: string
   ) {
     return this.http.post('http://localhost:5000/api/company/add', {
-      type,
+      
       name,
       emailCompany,
       passwordCompany,
@@ -27,7 +30,7 @@ export class HttpService {
       adress,
       imgUrlCompany,
     });
-  };
+  }
 
   onclick(
     type: string,
@@ -51,33 +54,40 @@ export class HttpService {
     });
   }
 
+  sendEmail(data) {
+    return this.http.post('http://localhost:5000/api/user/send', data);
+  }
+
   onRRRR(
-    Etype: string ,
-    Ename: string ,
-    Edescription: string ,
-    Edate: string ,
-    Eplace: string ,
-    ElocURL: string ,
-    Eprice: string ,
+    Etype: string,
+    Ename: string,
+    Edescription: string,
+    Edate: string,
+    Eplace: string,
+    ElocURL: string,
+    Eprice: string,
     EvidURL: string,
     Esignature: string,
-
+    companyId:string
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
-    Etype,
-    Ename,
-    Edescription,
-    Edate,
-    Eplace ,
-    ElocURL ,
-    Eprice ,
-    EvidURL,
-
-    Esignature
+      Etype,
+      Ename,
+      Edescription,
+      Edate,
+      Eplace,
+      ElocURL,
+      Eprice,
+      EvidURL,
+      Esignature,
+      companyId
     });
   }
-  getEvents(){
-   return this.http.get('http://localhost:5000/api/event')
+  getEvents() {
+    return this.http.get('http://localhost:5000/api/event');
+  }
+  getEventsForCustomer() {
+    return this.http.get('http://localhost:5000/api/event');
   }
 
 
@@ -85,4 +95,9 @@ export class HttpService {
     return this.http.get('http://localhost:5000/api/user/')
   }
 
+  getEventsByCompanyId(companyId:string){
+    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
+   }
+   
+  
 }
