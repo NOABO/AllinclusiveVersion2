@@ -12,6 +12,7 @@ import { EventmakeraccountComponent } from './eventmakeraccount/eventmakeraccoun
 import { HomeComponent } from './component/home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+
   { path: 'company', component: CompanyComponent },
   { path: 'customer', component: CustomerComponent },
   { path: 'event-customer', component: EventCustomerComponent },
@@ -19,9 +20,12 @@ const routes: Routes = [
   { path: 'login-customer', component: LoginCustomerComponent },
   { path: 'login-company', component: LoginCompanyComponent },
   {path:'about', component:AboutUsComponent},
+
+
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {path: 'events-made',component: EventsMadeComponent},
   {path: 'home', component:HomeComponent}
+
 
 
 ];
