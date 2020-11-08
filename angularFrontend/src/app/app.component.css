@@ -10,6 +10,7 @@ header img {
 }
 
 header {
+
   background-color:rgb(255, 228, 196);
   position: fixed;
   top: 0;
@@ -36,4 +37,22 @@ header li a {
   font-weight: bold;
   font-size: 21px;
   font-family: cursive;
+}
+
+.nav{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+};
+
+#aboutUs{
+  margin-left: 200px;
+}
+.contactLogo{
+height: 50px;
+}
+.fbLogo{
+height:50px;
+}
+.gmailLogo{
+    height: 50px;
 }
