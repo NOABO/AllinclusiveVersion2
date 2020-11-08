@@ -18,18 +18,20 @@ router.get("/:id", async (req, res) => {
 });
 
 router.post("/add", async (req, res) => {
-  console.log(req.body);
-  newEvent = new Event({
-    Etype: req.body.Etype,
-    Ename: req.body.Ename,
-    Edescription: req.body.Edescription,
-    Edate: req.body.Edate,
+  
+  const newEvent = new Event({
+    Etype: req.body.Etype ,
+    Ename: req.body.Ename ,
+    Edescription: req.body.Edescription ,
+    Edate: req.body.Edate ,
     Eplace: req.body.Eplace,
-    ElocURL: req.body.ElocURL,
-    Eprice: req.body.Eprice,
-    EvidURL: req.body.EvidURL,
+    ElocURL: req.body.ElocURL ,
+    Eprice: req.body.Eprice ,
+    EvidURL:req.body.EvidURL,
+    Esignature: req.body.Esignature ,
   });
   await newEvent.save(() => {
+    
     res.json(newEvent);
   });
 });

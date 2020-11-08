@@ -1,1 +1,28 @@
-<p>events-made works!</p>
+<br/><br/><br/><p>Events posted by you</p>
+<!-- <button id="events" (click)="showEvents()">My events</button> -->
+<div class="events" *ngFor="let event of data ">
+  <div class="eventB">
+  <p>event type:{{event.Etype}}</p>
+  <p>event name :{{event.Ename}}</p>
+  <p>description:{{event.Edescription}}</p>
+  <p>event date:{{event.Edate}}</p>
+  <p>event Price:{{event.Eprice}}</p>
+ <div class="location map"></div>
+  <p>event location</p>
+  <iframe
+    src="{{event.ElocURL}}"
+    width="400"
+    height="300"
+    frameborder="0"
+    style="border: 0"
+    allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0"
+  >
+  </iframe>  
+
+<!-- <div class="video">
+  <iframe width="640" height="480" controls src="{{event.EvidURL}}"> </iframe>
+</div> -->
+</div><br/>
+</div>

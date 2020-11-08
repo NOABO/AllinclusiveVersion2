@@ -1,6 +1,14 @@
-<h1>this is the customer page</h1>
 
+<div class="sign">
+  <br/>
+<br/>
+<br/>
+
+<h1 class="title">Sign Up As a Customer</h1>
+<br/>
+<br/>
 <p>Type</p>
+<i id="icon" class="material-icons prefix">mode_edit</i>
 <input
   type="text"
   id="type"
@@ -12,6 +20,7 @@
   required
 />
 <p>firstName</p>
+<i id="icon" class="material-icons prefix">person</i>
 <input
   type="name"
   id="name"
@@ -23,6 +32,7 @@
   required
 />
 <p>lastName</p>
+<i id="icon" class="material-icons prefix">person</i>
 <input
   type="lastName"
   id="lasttName"
@@ -33,6 +43,7 @@
   required
 />
 <p>email</p>
+<i id="icon" class="material-icons prefix">email</i>
 <input
   type="email"
   id="email"
@@ -43,6 +54,7 @@
   required
 />
 <p>passWord</p>
+<i id="icon" class="material-icons prefix">vpn_key</i>
 <input
   type="passWord"
   id="passWord"
@@ -53,6 +65,7 @@
   required
 />
 <p>phoneNumber</p>
+<i id="icon" class="material-icons prefix">phone</i>
 <input
   type="phoneNumber"
   id="phoneNumber"
@@ -63,6 +76,7 @@
   required
 />
 <p>specialNeed</p>
+<i id="icon" class="material-icons prefix">insert_comment</i>
 <input
   type="specialNeed"
   id="specialNeed"
@@ -73,6 +87,7 @@
   required
 />
 <p>imgUrl</p>
+<i id="icon" class="material-icons prefix">image</i>
 <input
   type="text"
   id="imgUrl"
@@ -82,7 +97,14 @@
   [(ngModel)]="imgUrl"
   required
 />
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <button class="btn" type="submit" (click)="onSubmit('login-customer')">
   Signup
 </button>
+</div>
+

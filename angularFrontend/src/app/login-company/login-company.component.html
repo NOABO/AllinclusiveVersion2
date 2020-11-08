@@ -1,19 +1,46 @@
-<p>login-company works!</p>
+
+<p>login as company:</p>
 <div>
   <p>email</p>
+  <i id="icon" class="material-icons prefix"> email</i>
+<div class="t">
+<div class="login">
+  <br>
+  <br>
+  <br>
+  <br>
+  <p class="e">Email</p>
+
+
   <input
     type="text"
-    id="type"
-    class="form-control"
-    placeholder="enter your email"
+    id="passwordCompany"
+    placeholder="E-mail"
+    required=""
+    [(ngModel)]="emailCompany"
+    required
   />
-  <p>password</p>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p class="p">Password</p>
+  
+  <br />
+
   <input
-    type="password"
-    id="name"
-    class="form-control"
-    placeholder="enter your password"
+    type="text"
+    id="passwordCompany"
+    placeholder="Password"
+    required=""
+    [(ngModel)]="passwordCompany"
+    required
   />
+  <br />
+
+<br />
+<br />
+<br />
   <button
     class="btn"
     type="submit"
@@ -21,11 +48,18 @@
   >
     Login
   </button>
-  <button
+  <br />
+
+<br />
+<br />
+<br />
+
+  <button id="m"
     class="btn"
     type="submit"
     (click)="handleCreateAccountButton('company')"
   >
     Create new account
   </button>
+</div>
 </div>

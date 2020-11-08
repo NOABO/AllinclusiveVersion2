@@ -61,14 +61,14 @@ router.post("/login", async (req, res, next) => {
     const company = await Company.findOne({
       emailCompany: req.body.emailCompany,
     });
-    if (!company) return res.status(400).send("Email or password is wrong");
+    if (!company) return res.status(200).json({});
 
     //check password
     const validPass = await bcrypt.compare(
       req.body.passwordCompany,
       company.passwordCompany
     );
-    if (!validPass) return res.status(400).send("password not valid");
+    if (!validPass) return res.status(200).json({});
 
     //create and assign a token
     const token = jwt.sign({ _id: company._id }, config.get("jwt").secret);
@@ -80,11 +80,14 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-router.get("/", async (req, res) => {
-  await Company.find({}, (err, data) => {
-    res.json(data);
-  });
-});
+// router.get("/company/login", async (req, res) => {
+//   await Company.findOne({
+//     emailCompany : req.body.email,
+//   }, (err, data) => {
+//     if(err) throw err;
+//     res.json(data);
+//   });
+// });
 
 router.delete("/", async (req, res) => {
   await Company.deleteMany(req.params.id, req.body);

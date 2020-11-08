@@ -1,4 +1,9 @@
-.add{
-    margin-bottom: 400px;
-    margin-right: 100px;
+
+.add {
+  margin-bottom: 400px;
+  margin-right: 100px;
+}
+
+#events-container{
+  font-size: 25px;
 }
