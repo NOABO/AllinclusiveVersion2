@@ -1,0 +1,45 @@
+#eventProfile{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 1100px;
+    background-color: rgba(56, 33, 4, 0.514);
+      width: 800px;
+      align-items: center;
+      text-align: center;
+}
+
+input{
+    background-color: transparent;
+      border-color: rgba(49, 7, 7, 0.753);
+      outline: none;
+      height: 30px;
+      font-size: 25px;
+      color: white;
+      font-family: cursive;
+      width: 300px;
+      display: inline-block;
+  }
+
+  ::placeholder{
+    color: rgba(240, 248, 255, 0.425);
+    text-align: center;
+  }
+  
+    
+    
+.btn{
+  background-color: rgba(206, 143, 143, 0.377);
+    border-color: rgba(49, 7, 7, 0.753);
+    outline: none;
+    height: 33px;
+    font-size: 20px;
+    color: white;
+    font-family: cursive;
+     border-radius: 5%;
+    
+}
+.btn:hover{
+background-color: rgb(189, 48, 33);
+}

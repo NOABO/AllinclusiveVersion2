@@ -61,7 +61,9 @@
         [(ngModel)]="ElocURL"
         required
       />
-      <button (click)="addMarker(coor.value)">Add Marker</button><br />
+     <br>
+     <br>
+      <button class="btn" (click)="addMarker(coor.value)">Add Marker</button><br />
       <div #Gmap class="Gmap"></div>
     </div>
     <br />
@@ -87,6 +89,8 @@
         [(ngModel)]="EvidURL"
         required
       />
+      <br>
+     <br>
       <button class="btn" (click)="add(video.value)">
         add event related video
       </button>
@@ -100,6 +104,8 @@
       [(ngModel)]="Esignature"
       required
     />
+    <br>
+    <br>
     <button class="btn" (click)="onSubmit1('events-made')">Submit Event</button>
   </div>
 </div>
