@@ -49,30 +49,30 @@ export class EventCustomerComponent implements OnInit {
   handleReservationButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
   }
-
-  //     this._http.getEvents().subscribe((data:[])=>{
-  //       this.data = data
-  //       console.log(this.data,'getting the events posted')
-  //     })
-
-  // addImg(val) {
-
-  // this.currentVal=val
-  //     let imgH= document.createElement('div');
-  //     imgH.className = 'imgH';
-  //     imgH.innerHTML =
-  //       <img
-  //                   src= ${this.currentVal}
-
-  //       document.querySelector('.imgHolder').appendChild(imgH);
-  //   }
-
-  //   likeButtonClick() {
-  //     this.numberOfLikes++;
-  //     console.log(this.numberOfLikes)
-  //   }
-  //   dislikeButtonClick() {
-  //     this.numberOfLikes--;
-  //     console.log(this.numberOfLikes)
-  //   }
 }
+
+//     this._http.getEvents().subscribe((data:[])=>{
+//       this.data = data
+//       console.log(this.data,'getting the events posted')
+//     })
+
+// addImg(val) {
+
+// this.currentVal=val
+//     let imgH= document.createElement('div');
+//     imgH.className = 'imgH';
+//     imgH.innerHTML =
+//       <img
+//                   src= ${this.currentVal}
+
+//       document.querySelector('.imgHolder').appendChild(imgH);
+//   }
+
+//   likeButtonClick() {
+//     this.numberOfLikes++;
+//     console.log(this.numberOfLikes)
+//   }
+//   dislikeButtonClick() {
+//     this.numberOfLikes--;
+//     console.log(this.numberOfLikes)
+//   }

@@ -9,7 +9,6 @@ import Swal from 'sweetalert2';
   styleUrls: ['./company.component.css'],
 })
 export class CompanyComponent implements OnInit {
-  
   name: string = '';
   emailCompany: string = '';
   passwordCompany: string = '';
@@ -20,13 +19,12 @@ export class CompanyComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // ngDoCheck() {console.log(this.type)}
+
 
   onSubmit(pageName: string): void {
     this.router.navigate([`${pageName}`]);
 
     if (
-    
       this.name === '' ||
       this.emailCompany === '' ||
       this.phoneNumberCompany === '' ||
