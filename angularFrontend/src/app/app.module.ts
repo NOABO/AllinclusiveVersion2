@@ -27,6 +27,7 @@ import { HomeComponent } from './component/home/home.component';
     EventCustomerComponent,
     EventmakeraccountComponent,
     EMeventsComponent,
+
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,

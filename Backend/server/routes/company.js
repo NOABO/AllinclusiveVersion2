@@ -78,14 +78,13 @@ router.post("/login", async (req, res, next) => {
   }
 });
 
-// router.get("/company/login", async (req, res) => {
-//   await Company.findOne({
-//     emailCompany : req.body.email,
-//   }, (err, data) => {
-//     if(err) throw err;
-//     res.json(data);
-//   });
-// });
+
+router.get("/", async (req, res) => {
+  await Company.find({}, (err, data) => {
+    res.json(data);
+  });
+});
+
 
 router.delete("/", async (req, res) => {
   await Company.deleteMany(req.params.id, req.body);

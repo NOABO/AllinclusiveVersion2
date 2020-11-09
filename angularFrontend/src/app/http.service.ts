@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpParams } from "@angular/common/http";
-import { Observable } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
-import { throwError } from 'rxjs';
+import {
+  HttpClient,
+  HttpErrorResponse,
+  HttpParams,
+} from '@angular/common/http';
+
 @Injectable({
   providedIn: 'root',
 })
 export class HttpService {
-  constructor(private http: HttpClient) { }
+  
+  constructor(private http: HttpClient) {}
 
   onsubmit(
     name: string,
@@ -25,7 +28,7 @@ export class HttpService {
       adress,
       imgUrlCompany,
     });
-  };
+  }
 
   onclick(
     type: string,
@@ -49,60 +52,50 @@ export class HttpService {
     });
   }
 
+  sendEmail(data) {
+    return this.http.post('http://localhost:5000/api/user/send', data);
+  }
+
   onRRRR(
-    Etype: string ,
-    Ename: string ,
-    Edescription: string ,
-    Edate: string ,
-    Eplace: string ,
-    ElocURL: string ,
-    Eprice: string ,
+    Etype: string,
+    Ename: string,
+    Edescription: string,
+    Edate: string,
+    Eplace: string,
+    ElocURL: string,
+    Eprice: string,
     EvidURL: string,
     Esignature: string,
+    companyId:string
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
-    Etype,
-    Ename,
-    Edescription,
-    Edate,
-    Eplace ,
-    ElocURL ,
-    Eprice ,
-    EvidURL,
-    Esignature
+      Etype,
+      Ename,
+      Edescription,
+      Edate,
+      Eplace,
+      ElocURL,
+      Eprice,
+      EvidURL,
+      Esignature,
+      companyId
     });
   }
-  getEvents(){
-   return this.http.get('http://localhost:5000/api/event')
+  getEvents() {
+    return this.http.get('http://localhost:5000/api/event');
   }
-  onCheck(
-    email:String,
-    password:String
-  ){
+  getEventsForCustomer() {
+    return this.http.get('http://localhost:5000/api/event');
+  }
 
-    return this.http.post('http://localhost:5000/api/user/login', {
-      email,
-      password
-    })
-  }
-  handleError(error: HttpErrorResponse) {
-    let errorMessage = 'Unknown error!';
-    if (error.error instanceof ErrorEvent) {
-      // Client-side errors
-      errorMessage = `Error: ${error.error.message}`;
-    } else {
-      // Server-side errors
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    window.alert(errorMessage);
-    return throwError(errorMessage);
-  }
-  sendGetRequest(){
-    return this.http.get('http://localhost:5000/api/event/eventsCustomer').pipe(retry(3), catchError(this.handleError));
-  }
 
   handleCustomerButton(){
     return this.http.get('http://localhost:5000/api/user/')
   }
 
+  getEventsByCompanyId(companyId:string){
+    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
+   }
+   
+  
 }
