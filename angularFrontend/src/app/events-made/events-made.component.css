@@ -1,3 +1,18 @@
 .eventB{
     background-color: lightblue;
 }
+#events-container{
+ margin: auto;
+  width: 50%;
+  padding: 10px;
+ border-style: solid double;
+}
+
+#title-events{
+  text-align: center;
+  font-family: cursive;
+}
+
+#title-events strong{
+ color: brown;
+}
