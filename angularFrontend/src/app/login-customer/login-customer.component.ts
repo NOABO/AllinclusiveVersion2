@@ -22,25 +22,25 @@ export class LoginCustomerComponent implements OnInit {
       password: '',
     });
   }
-  handleCreateAccountButton(pageName: string): void {
-    this.router.navigate([`${pageName}`]);
-  }
 
   ngOnInit(): void {
     const currentUser = this.CustomerService.Save() || {};
     console.log(currentUser);
     if (Object.keys(currentUser).length) {
-      this.router.navigate([currentUser.type]);
+      this.router.navigate([currentUser]);
     }
+  }
+  handleCreateAccountButton(pageName: string): void {
+    this.router.navigate([`${pageName}`]);
   }
 
   onSubmit(log, pageName: string): void {
     console.log(log);
-    const company = {
+    const customer = {
       email: log.email,
       password: log.password,
     };
-    this.CustomerService.create(company).subscribe((res: any) => {
+    this.CustomerService.create(customer).subscribe((res: any) => {
       this.CustomerService.Check(res);
       if (Object.keys(res).length) {
         Swal.fire({

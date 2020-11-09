@@ -1,40 +1,53 @@
-<br /><br /><br /><br />
+<div class="login">
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
 
-<div>
-  <form
-    [formGroup]="loginForm"
-    (ngSubmit)="onSubmit(loginForm.value, 'customer')"
-  >
-    <div class="mb-3">
-      <label for="email" class="form-label"> Email </label>
-      <input
-        id="email"
-        type="email"
-        name="email"
-        class="form-control"
-        formControlName="email"
-      />
-    </div>
-
-    <div class="mb-3">
-      <label for="password" class="form-label"> Password </label>
-      <input
-        id="password"
-        type="password"
-        name="password"
-        class="form-control"
-        formControlName="password"
-      />
-    </div>
-    <button id="m" class="btn" type="submit">Login</button>
-    <button
-      id="h"
-      class="btn"
-      type="submit"
-      (click)="handleCreateAccountButton('customer')"
+  <div>
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit(loginForm.value, 'event-customer')"
     >
-      Register
-    </button>
-  </form>
+      <div class="mb-3">
+        <label for="email" class="l"> Email </label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="form-control"
+          formControlName="email"
+        />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <div class="mb-3">
+        <label for="password" class="s"> Password </label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          class="form-control"
+          formControlName="password"
+        />
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <button id="m" class="btn" type="submit">Login</button>
+      <button
+        id="h"
+        class="btn"
+        type="submit"
+        (click)="handleCreateAccountButton('customer')"
+      >
+        Register
+      </button>
+    </form>
+  </div>
 </div>
-
