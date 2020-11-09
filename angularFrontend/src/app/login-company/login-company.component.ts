@@ -27,9 +27,6 @@ export class LoginCompanyComponent implements OnInit {
   ngOnInit(): void {
     const currentUser = this.CompanyService.Save() || {};
     console.log(currentUser);
-    if (Object.keys(currentUser).length) {
-      this.router.navigate([currentUser.type]);
-    }
   }
   handleCreateAccountButton(pageName: string): void {
     this.router.navigate([`${pageName}`]);
@@ -42,7 +39,7 @@ export class LoginCompanyComponent implements OnInit {
     };
     this.CompanyService.createLogin(company).subscribe((res: any) => {
       this.CompanyService.Check(res);
-      
+
       if (Object.keys(res).length) {
         Swal.fire({
           position: 'top-end',
