@@ -43,3 +43,14 @@ input{
 .btn:hover{
 background-color: rgb(189, 48, 33);
 }
+
+#inputs-container{
+  position: relative;
+  top: 40px;
+}
+
+p{
+  font-size: 20px;
+  color: brown;
+  font-family: cursive;
+}

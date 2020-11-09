@@ -28,7 +28,6 @@ import { ReservationComponent } from './reservation/reservation.component';
     EventCustomerComponent,
     EventmakeraccountComponent,
     EMeventsComponent,
-
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
@@ -49,4 +48,4 @@ import { ReservationComponent } from './reservation/reservation.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

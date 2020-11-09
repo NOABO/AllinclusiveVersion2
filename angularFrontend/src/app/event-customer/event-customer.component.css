@@ -21,25 +21,18 @@
     margin-top: 200px;
 }
 
-table, th, td {
-  border: 1px solid black;
-  width: 100%;
-  border-collapse: collapse;
-  height: auto;
-  border-spacing: 1px;
-
+#events-container{
+ margin: auto;
+  width: 50%;
+  padding: 10px;
+ border-style: solid double;
 }
 
-  td {
-  height: 50px;
+#title-events{
   text-align: center;
+  font-family: cursive;
 }
 
-th {
-  background-color: #8B4513;
-  color: black;
-}
-
-table {
-  border-spacing: 0.5rem;
+#title-events strong{
+ color: brown;
 }

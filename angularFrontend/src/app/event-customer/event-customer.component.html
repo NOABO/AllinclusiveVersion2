@@ -1,54 +1,10 @@
-
-
-  <mat-card *ngFor="let product of products" style="margin-top:10px;">
-    <mat-card-header>
-      <mat-card-title>{{product.name}}</mat-card-title>
-      <mat-card-subtitle>{{product.price}} $/ {{product.quantity}}
-      </mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{product.description}}
-      </p>
-      <img style="height:100%; width: 100%;" src="{{ product.imageUrl }}" />
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button> Buy product</button>
-    </mat-card-actions>
-  </mat-card>
-</div> -->
-<!-- <h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-<h1>hello</h1>
-
-  <div *ngFor="let item of products; let i = index" id="events-container">
-    <p >
-      {{item.Etype}}
-      {{item.Ename}}
-      {{item.Edescription}}
-      {{item.Edate}}
-      {{item.Eplace}}
-      {{item.Eprice}}
-      {{item.Esignature}}
-    </p>
-     <iframe src=" {{item.ElocURL}}" width="400" height="300" frameborder="0" style="border: 0" allowfullscreen="" aria-hidden="false"
-      tabindex="0">
-    </iframe>         
-    <iframe width="400" height="300" controls src="https://www.youtube.com/embed/FS0XoKiKVwU" > </iframe>
-</div> -->
+<!-- <br />
+<br />
+<br />
+<br />
+<br />
 <div>
-    <button class="btn" type="submit" (click)="handleReservationButton('reservation')">Reservation</button>  
-</div>
-
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<div> 
-<table>
+  <table>
     <th id="type-col">Event Type</th>
     <th>Event Name</th>
     <th>Event Description</th>
@@ -56,23 +12,77 @@
     <th>Event Place</th>
     <th>Event Price</th>
     <th>Event video</th>
-  <tbody>
-    <tr *ngFor="let item of products; let i = index" id="events-container">
-      <td>{{item.Etype}}</td>
-      <td>{{item.Ename}}</td>
-      <td>{{item.Edescription}}</td>
-      <td>{{item.Edate}}</td>
-      <td>{{item.Eplace}}</td>
-      <td>{{item.Eprice}}</td>
-      <td> <iframe width="400" height="300"  controls [src]='safeUrl[i]'
-          allowfullscreen></iframe></td>
-          <td> <iframe [src]="safeurlvideo[i]" width="400" height="300" frameborder="0" style="border: 0" allowfullscreen=""
-            aria-hidden="false" tabindex="0">
-          </iframe></td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr *ngFor="let item of products; let i = index" id="events-container">
+        <td>{{ item.Etype }}</td>
+        <td>{{ item.Ename }}</td>
+        <td>{{ item.Edescription }}</td>
+        <td>{{ item.Edate }}</td>
+        <td>{{ item.Eplace }}</td>
+        <td>{{ item.Eprice }}</td>
+        <td>
+          <iframe
+            width="400"
+            height="300"
+            controls
+            [src]="safeUrl[i]"
+            allowfullscreen
+          ></iframe>
+        </td>
+        <td>
+          <iframe
+            [src]="safeurlvideo[i]"
+            width="400"
+            height="300"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          >
+          </iframe>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <button
+      class="btn"
+      type="submit"
+      (click)="handleReservationButton('reservation')"
+    >
+      Reservation
+    </button>
+  </div>
+</div> -->
+
+
+
+<div *ngFor="let item of products; let i = index" id="events-container">
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div id="title-events">  
+  <p><strong>Event Type :</strong>  {{ item.Etype }}</p>
+  <p><strong>Event Name :</strong>  {{ item.Ename }}</p>
+  <p><strong>Event Description :</strong> {{ item.Edescription }}</p>
+  <p><strong>Event Date :</strong>  {{ item.Edate }}</p>
+  <p><strong>Event Place :</strong> {{ item.Eplace }}</p>
+  <p><strong>Event Price ($) :</strong> {{ item.Eprice }}</p>
+  </div>
+  <div>
+    <iframe width="750" height="350" controls [src]="safeUrl[i]" allowfullscreen></iframe>
+  </div>
+  <br/>
+  <div>
+    <iframe [src]="safeurlvideo[i]" width="750" height="350" frameborder="0" style="border: 0" allowfullscreen=""
+      aria-hidden="false" tabindex="0">
+    </iframe>
+  </div>
+  <br/>
 </div>
-
-
-
+<button class="btn" type="submit" (click)="handleReservationButton('reservation')">
+  Reservation
+</button>

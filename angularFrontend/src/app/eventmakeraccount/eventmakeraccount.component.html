@@ -1,6 +1,7 @@
+
 <div id="eventProfile">
-  <div>
-    <p>Event Type</p>
+  <div id="inputs-container">
+    <p><strong>Event Type</strong></p>
 
     <input
       #EventType
@@ -9,7 +10,7 @@
       [(ngModel)]="Etype"
       required
     />
-    <p>Event Name</p>
+    <p><strong>Event Name</strong></p>
     <input
       #EventName
       type="text"
@@ -17,7 +18,7 @@
       [(ngModel)]="Ename"
       required
     />
-    <p>Event description</p>
+    <p><strong>description</strong></p>
     <input
       #desc
       type="text"
@@ -25,7 +26,7 @@
       [(ngModel)]="Edescription"
       required
     />
-    <p>Event date</p>
+    <p><strong>date</strong></p>
     <input
       #EventDate
       type="datetime-local"
@@ -33,7 +34,7 @@
       [(ngModel)]="Edate"
       required
     />
-    <p>Location</p>
+    <p><strong>Location</strong></p>
     <input
       #Location
       type="text"
@@ -42,7 +43,7 @@
       required
     />
     <div>
-      <p>Enter location coordinates here(Case Sensitive Without QUOTES)</p>
+      <p><strong>Enter location coordinates here(Case Sensitive Without QUOTES)</strong></p>
       <a
         href="https://www.google.com/maps/@36.831232,10.1974016,13z"
         target="_blank"
@@ -61,7 +62,7 @@
       <div #Gmap class="Gmap"></div>
     </div>
     <br />
-    <p>Price per Person</p>
+    <p><strong>Price per Person</strong></p>
     <input
       #Price
       type="number"
@@ -74,7 +75,7 @@
       [(ngModel)]="Eprice"
       required
     />
-    <p>put your video src here (Case Sensitive Without QUOTES)</p>
+    <p><strong>put your video src here (Case Sensitive Without QUOTES)</strong> </p>
     <div>
       <input
         #video
