@@ -13,7 +13,6 @@ export class HttpService {
   constructor(private http: HttpClient) {}
 
   onsubmit(
-    
     name: string,
     emailCompany: string,
     phoneNumberCompany: string,
@@ -22,7 +21,6 @@ export class HttpService {
     imgUrlCompany: string
   ) {
     return this.http.post('http://localhost:5000/api/company/add', {
-      
       name,
       emailCompany,
       passwordCompany,

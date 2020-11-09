@@ -8,7 +8,6 @@ const config = require("config");
 //Validation for company registration
 
 const schema = Joi.object({
- 
   name: Joi.string().min(6).required(),
   emailCompany: Joi.string().min(6).required().email(),
   passwordCompany: Joi.string().min(6).required(),
@@ -29,7 +28,6 @@ router.post("/add", async (req, res, next) => {
     const hashedPassword = await bcrypt.hash(req.body.passwordCompany, salt);
 
     const newCompany = new Company({
-      
       name: req.body.name,
       emailCompany: req.body.emailCompany,
       passwordCompany: hashedPassword,

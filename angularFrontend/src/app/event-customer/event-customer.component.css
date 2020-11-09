@@ -14,6 +14,7 @@ table, th, td {
   border-collapse: collapse;
   height: auto;
   border-spacing: 1px;
+
 }
 
   td {
@@ -26,4 +27,6 @@ th {
   color: black;
 }
 
-
+table {
+  border-spacing: 0.5rem;
+}
