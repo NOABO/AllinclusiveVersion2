@@ -28,7 +28,6 @@ import { ReservationComponent } from './reservation/reservation.component';
     EventCustomerComponent,
     EventmakeraccountComponent,
     EMeventsComponent,
-
     EventsMadeComponent,
     LoginCustomerComponent,
     LoginCompanyComponent,
