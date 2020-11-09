@@ -8,7 +8,6 @@ import { HttpService } from '../http.service';
   styleUrls: ['./customer.component.css'],
 })
 export class CustomerComponent implements OnInit {
-  type: string = '';
   firstName: string = '';
   lastName: string = '';
   email: string = '';
@@ -16,25 +15,17 @@ export class CustomerComponent implements OnInit {
   phoneNumber: string = '';
   specialNeed: string = '';
   imgUrl: string = '';
-  constructor(private _http: HttpService,private router: Router) {}
-
+  constructor(private _http: HttpService, private router: Router) {}
 
   ngOnInit(): void {}
 
-
   // ngDoCheck() {console.log(this.type)}
 
-
-
-
-  onSubmit(pageName:string) :void{
-
-
+  onSubmit(pageName: string): void {
     this.router.navigate([`${pageName}`]);
 
     this._http
       .onclick(
-        this.type,
         this.firstName,
         this.lastName,
         this.email,
@@ -47,5 +38,4 @@ export class CustomerComponent implements OnInit {
         console.log(data);
       });
   }
-
 }

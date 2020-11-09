@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+
+import { retry, catchError } from 'rxjs/operators';
+
+import { throwError } from 'rxjs';
 import {
   HttpClient,
   HttpErrorResponse,
@@ -9,11 +13,9 @@ import {
   providedIn: 'root',
 })
 export class HttpService {
-  
   constructor(private http: HttpClient) {}
 
   onsubmit(
-    
     name: string,
     emailCompany: string,
     phoneNumberCompany: string,
@@ -22,7 +24,6 @@ export class HttpService {
     imgUrlCompany: string
   ) {
     return this.http.post('http://localhost:5000/api/company/add', {
-      
       name,
       emailCompany,
       passwordCompany,
@@ -33,7 +34,6 @@ export class HttpService {
   }
 
   onclick(
-    type: string,
     firstName: string,
     lastName: string,
     email: string,
@@ -43,7 +43,6 @@ export class HttpService {
     imgUrl: string
   ) {
     return this.http.post('http://localhost:5000/api/user/add', {
-      type,
       firstName,
       lastName,
       email,
@@ -68,7 +67,7 @@ export class HttpService {
     Eprice: string,
     EvidURL: string,
     Esignature: string,
-    companyId:string
+    companyId: string
   ) {
     return this.http.post('http://localhost:5000/api/event/add', {
       Etype,
@@ -80,7 +79,7 @@ export class HttpService {
       Eprice,
       EvidURL,
       Esignature,
-      companyId
+      companyId,
     });
   }
   getEvents() {
@@ -90,14 +89,30 @@ export class HttpService {
     return this.http.get('http://localhost:5000/api/event');
   }
 
-
-  handleCustomerButton(){
-    return this.http.get('http://localhost:5000/api/user/')
+  handleCustomerButton() {
+    return this.http.get('http://localhost:5000/api/user/');
   }
 
-  getEventsByCompanyId(companyId:string){
-    return this.http.post('http://localhost:5000/api/event/companyId',{companyId:companyId});
-   }
-   
-  
+  getEventsByCompanyId(companyId: string) {
+    return this.http.post('http://localhost:5000/api/event/companyId', {
+      companyId: companyId,
+    });
+  }
+  handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Unknown error!';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side errors
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side errors
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
+  }
+  sendGetRequest() {
+    return this.http
+      .get('http://localhost:5000/api/event/eventsCustomer')
+      .pipe(retry(3), catchError(this.handleError));
+  }
 }

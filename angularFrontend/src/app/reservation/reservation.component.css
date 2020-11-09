@@ -1,3 +1,14 @@
+.login{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 520px;
+  background-color: rgba(56, 33, 4, 0.514);
+    width: 800px;
+    align-items: center;
+    text-align: center;
+}
 input{
     background-color: transparent;
       border-color: rgba(49, 7, 7, 0.753);
